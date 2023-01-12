@@ -1,3 +1,3 @@
 export interface ITabdiagnosisleft {
-    type: string
+  type: string;
 }

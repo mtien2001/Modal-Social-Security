@@ -1,1 +1,1 @@
-export * from './tab_diagnosis_right'
+export * from "./tab_diagnosis_right";

@@ -101,12 +101,17 @@ export const Title = styled.p`
 
 export const DivDiagnosisDisable = styled.div`
   background-color: #91b3a9;
-  min-width: 492px;
+  max-width: 492px;
   max-height: 102px;
   width: 100%;
   box-shadow: 2px 4px 10px rgba(30, 38, 46, 0.08);
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
+  @media (max-width: 768px) {
+    min-width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 12px;
+  }
 `;
 
 export const TextLabelDisable = styled.p`
@@ -209,19 +214,21 @@ export const TextDetail = styled.p`
   }
 `;
 
-const StyledTextField = styled.input`
-  width: 100%;
-  height: 40px;
-
-  ${(props) =>
-    (props.empty &&
-        css`
-        color: none;
-        backgroundcolor: white;
-      `) ||
-    (props.active &&
-        css`
-        color: black;
-        backgroundcolor: whitesmoke;
-      `)}
-`;
+export const Text = styled.h1<any>(
+  {
+    lineHeight: "100%",
+    margin: "0px"
+  },
+  props => ({
+    "@media(max-width: 960px)": {
+      fontSize: 22
+    },
+    "@media(max-width: 768px)": {
+      fontSize: 20
+    },
+    "@media(max-width: 576px)": {
+      fontSize: 18
+    },
+    ...props
+  })
+);

@@ -1,24 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import './../src/styles/hiragino_sans.css'
+// import './../src/styles/zen_maru_gothic.css'
+import React from "react";
+import { ModalSocialSecurity } from "./components/template/modal_social_security";
+import { dataMock } from "./components/template/modal_social_security/modal_social_security.contants";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ModalSocialSecurity data={dataMock} />
     </div>
   );
 }
