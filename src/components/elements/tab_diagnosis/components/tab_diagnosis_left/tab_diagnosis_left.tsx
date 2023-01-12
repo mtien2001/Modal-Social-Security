@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
-import { DivDiagnosisLeft, FlexTabLeft, Title } from "../../../../../styled";
+import { DivDiagnosisLeft, FlexTabLeft, Title } from "./styled";
 import { images } from "../../../../../assets/images";
-import { ITabdiagnosisleft } from "./tab_diagnosis_left.types";
+import { ITabdiagnosisleft } from "./types";
 
 export const TabDiagnosisLeft: React.FC<ITabdiagnosisleft> = (
   props

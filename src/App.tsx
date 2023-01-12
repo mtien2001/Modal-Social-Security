@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal } from "./pages/components/elements/modal";
-import { dataMock } from "./contants";
+import { dataMock } from "./pages/components/elements/modal/contants";
 
 function App() {
   return (

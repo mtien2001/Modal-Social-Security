@@ -1,6 +1,6 @@
 import React from "react";
-import { ITabDiagnosis } from "./tab_diagnosis.types";
-import { Flex } from "../../../styled";
+import { ITabDiagnosis } from "./types";
+import { Flex } from "./styled";
 import { TabDiagnosisLeft } from "./components/tab_diagnosis_left";
 import { TabDiagnosisRight } from "./components/tab_diagnosis_right";
 

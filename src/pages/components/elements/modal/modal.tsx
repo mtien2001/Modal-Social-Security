@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { StyledModal, FlexHeader, DivTag, Img, Text } from "../../../../styled";
-import { IModalProps } from "../../../../types";
+import { StyledModal, FlexHeader, DivTag, Img, Text } from "./styled";
+import { IModalProps } from "./types";
 import { images } from "../../../../assets/images";
 import { TabDiagnosis } from "../../../../components/elements/tab_diagnosis";
 

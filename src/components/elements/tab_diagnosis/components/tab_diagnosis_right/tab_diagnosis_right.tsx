@@ -1,21 +1,20 @@
 import React, { useCallback } from "react";
-import { ITabDiagnosisRight } from "./tab_diagnosis_right.types";
+import { ITabDiagnosisRight } from "./types";
 import { images } from "../../../../../assets/images";
 import {
-  Button,
-  DivDiagnosisDisable,
-  DivDiagnosisRight,
-  TextLabelDisable,
-  TextTitleDisable,
-  FlexDiagnosis,
-  Budget,
-  FlexBudget,
+  TextDetail,
   TextMoney,
   TextMoneyDesc,
-  TextDetail,
+  DivDiagnosisRight,
+  DivDiagnosisDisable,
+  TextTitleDisable,
+  TextLabelDisable,
   FlexLabelMoney,
-  Text
-} from "../../../../../styled";
+  FlexBudget,
+  Budget,
+  Button,
+  FlexDiagnosis
+} from "./styled";
 
 export const TabDiagnosisRight: React.FC<ITabDiagnosisRight> = (
   props
@@ -26,11 +25,11 @@ export const TabDiagnosisRight: React.FC<ITabDiagnosisRight> = (
     switch (type) {
       case "whenHeDied": {
         return (
-          <Text>
+          <TextDetail>
             ひと月あたり&nbsp;
             <TextMoney>{money}</TextMoney>
             <TextMoneyDesc>万円</TextMoneyDesc>
-          </Text>
+          </TextDetail>
         );
       }
       case "whenMedicalExpensesBecomeHigh": {
