@@ -202,7 +202,7 @@ export const WrapDisable = styled.div`
   }
 `;
 
-export const BoxRight = styled.div`
+export const WrapRight = styled.div`
   align-items: center;
   background-color: #ffffff;
   max-width: 492px;

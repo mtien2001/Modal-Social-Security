@@ -10,7 +10,7 @@ import {
     Button,
     BoxLeft,
     WrapLeft,
-    Title, BoxRight, BoxBudget
+    Title, WrapRight, BoxBudget
 } from "../../../../styled";
 import {BoxDisable} from "../box_disable";
 
@@ -33,7 +33,7 @@ export const WhenHeDied: React.FC<ITabWhenHeDiedProps> = (
       {data.isDisable ? (
               <BoxDisable />
       ) : (
-          <BoxRight>
+          <WrapRight>
             <BoxBudget>
               {data?.budget?.map((item, index) => <Budget key={index}>{item}</Budget>)}
             </BoxBudget>
@@ -46,7 +46,7 @@ export const WhenHeDied: React.FC<ITabWhenHeDiedProps> = (
 
                 <Button>詳しくみる</Button>
             </Label>
-          </BoxRight>
+          </WrapRight>
       )}
     </Flex>
   );

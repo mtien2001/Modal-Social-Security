@@ -10,7 +10,7 @@ import {
     Button,
     BoxLeft,
     WrapLeft,
-    Title, BoxRight, BoxBudget
+    Title, WrapRight, BoxBudget
 } from "../../../../styled";
 import {BoxDisable} from "../box_disable";
 
@@ -33,7 +33,7 @@ export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
       {data.isDisable ? (
               <BoxDisable />
       ) : (
-          <BoxRight>
+          <WrapRight>
             <BoxBudget>
               {data?.budget?.map((item, index) => <Budget key={index}>{item}</Budget>)}
             </BoxBudget>
@@ -47,7 +47,7 @@ export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
 
                 <Button>詳しくみる</Button>
             </Label>
-          </BoxRight>
+          </WrapRight>
       )}
     </Flex>
   );
