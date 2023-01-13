@@ -1,75 +1,18 @@
-import React, { useCallback } from "react";
-import { DivDiagnosisLeft, FlexTabLeft, Title } from "./styled";
-import { images } from "../../../../../assets/images";
-import { ITabdiagnosisleft } from "./types";
+import React from "react";
+import { TabLeft, DivLeft, Title } from "./styled";
+import { ITableft } from "./types";
 
-export const TabDiagnosisLeft: React.FC<ITabdiagnosisleft> = (
-  props
-): JSX.Element => {
-  const { type } = props;
+export const TabDiagnosisLeft: React.FC<ITableft> = (props): JSX.Element => {
+  const { title, image } = props;
 
-  const renderTabLeft = useCallback((type: string) => {
-    switch (type) {
-      case "whenHeDied": {
-        return (
-          <DivDiagnosisLeft>
-            <FlexTabLeft>
-              <img src={images.whenHeDiedIcon} width={"48px"} alt={""} />
-              <Title>亡くなった時</Title>
-            </FlexTabLeft>
-          </DivDiagnosisLeft>
-        );
-      }
-      case "whenMedicalExpensesBecomeHigh": {
-        return (
-          <DivDiagnosisLeft>
-            <FlexTabLeft>
-              <img
-                src={images.whenMedicalExpensesBecomeHighIcon}
-                width={"48px"}
-                alt={""}
-              />
-              <Title>
-                病気やケガで
-                <br />
-                医療費が高額になった時
-              </Title>
-            </FlexTabLeft>
-          </DivDiagnosisLeft>
-        );
-      }
-      case "whenYouCanNotWork": {
-        return (
-          <DivDiagnosisLeft>
-            <FlexTabLeft>
-              <img src={images.whenYouCanNotWorkIcon} width={"48px"} alt={""} />
-              <Title>働けなくなった時</Title>
-            </FlexTabLeft>
-          </DivDiagnosisLeft>
-        );
-      }
-      case "whenInTrouble": {
-        return (
-          <DivDiagnosisLeft>
-            <FlexTabLeft>
-              <img src={images.whenInTroubleIcon} width={"48px"} alt={""} />
-              <Title>障害状態になった時</Title>
-            </FlexTabLeft>
-          </DivDiagnosisLeft>
-        );
-      }
-      case "whenChildBorn": {
-        return (
-          <DivDiagnosisLeft>
-            <FlexTabLeft>
-              <img src={images.whenChildBornIcon} width={"48px"} alt={""} />
-              <Title>子どもが生まれる時</Title>
-            </FlexTabLeft>
-          </DivDiagnosisLeft>
-        );
-      }
-    }
-  }, []);
-
-  return <div>{renderTabLeft(type)}</div>;
+  return (
+    <div>
+      <TabLeft>
+        <DivLeft>
+          <img src={image} width={"48px"} alt={""} />
+          <Title>{title}</Title>
+        </DivLeft>
+      </TabLeft>
+    </div>
+  );
 };

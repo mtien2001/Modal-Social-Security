@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const DivDiagnosisLeft = styled.div`
+export const TabLeft = styled.div`
   display: flex;
   align-items: center;
   background-color: #edf9f5;
@@ -19,7 +19,7 @@ export const DivDiagnosisLeft = styled.div`
   border-bottom-left-radius: 12px;
 `;
 
-export const FlexTabLeft = styled.div`
+export const DivLeft = styled.div`
   display: flex;
   align-items: center;
   justify-content: start;

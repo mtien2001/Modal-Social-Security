@@ -17,7 +17,7 @@ export const StyledModal = Modal.styled`
   };
 `;
 
-export const FlexHeader = styled.div`
+export const ModalHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,7 @@ export const FlexHeader = styled.div`
   }
 `;
 
-export const DivTag = styled.div`
+export const ModalContainer = styled.div`
   padding: 0 24px 24px 24px;
 `;
 

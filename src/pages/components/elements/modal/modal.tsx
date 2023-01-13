@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { StyledModal, FlexHeader, DivTag, Img, Text } from "./styled";
-import { IModalProps } from "./types";
+import React from "react";
+import { StyledModal, ModalHeader, ModalContainer, Img, Text } from "./styled";
 import { images } from "../../../../assets/images";
 import { TabDiagnosis } from "../../../../components/elements/tab_diagnosis";
+import { useFetchModalDetial } from "./hooks";
 
-export const Modal: React.FC<IModalProps> = (props): JSX.Element => {
-  const { data } = props;
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsOpen(true);
-  }, []);
-
-  function toggleModal() {
-    setIsOpen(!isOpen);
-  }
+export const Modal = (): JSX.Element => {
+  const { data, isOpen, toggleModal } = useFetchModalDetial();
 
   return (
     <div>
@@ -23,7 +14,7 @@ export const Modal: React.FC<IModalProps> = (props): JSX.Element => {
         onBackgroundClick={toggleModal}
         onEscapeKeydown={toggleModal}
       >
-        <FlexHeader>
+        <ModalHeader>
           <Img width={"133.17px"} src={images.staffLeft} alt={""} />
           <Text
             fontSize={"24px"}
@@ -35,10 +26,10 @@ export const Modal: React.FC<IModalProps> = (props): JSX.Element => {
             あなたが公的保険で受け取れる金額
           </Text>
           <Img width={"130px"} src={images.staffRight} alt={""} />
-        </FlexHeader>
-        <DivTag>
+        </ModalHeader>
+        <ModalContainer>
           <TabDiagnosis data={data} />
-        </DivTag>
+        </ModalContainer>
       </StyledModal>
     </div>
   );

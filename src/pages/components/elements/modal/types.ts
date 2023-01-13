@@ -1,10 +1,5 @@
-export interface IModalItem {
+export interface IModalData {
   isDisable: boolean;
-  budget: string[];
-  money: number;
-  type: string;
-}
-
-export interface IModalProps {
-  data: IModalItem[];
+  budget?: string[];
+  money?: number;
 }

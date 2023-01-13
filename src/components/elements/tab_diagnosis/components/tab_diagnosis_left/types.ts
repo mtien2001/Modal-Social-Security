@@ -1,3 +1,4 @@
-export interface ITabdiagnosisleft {
-  type: string;
+export interface ITableft {
+  title: string;
+  image: string;
 }
