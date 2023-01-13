@@ -1,4 +1,4 @@
-import { IModalData } from "../../../pages/components/elements/modal/types";
+import { IModalData } from "../../../types";
 
 export interface ITabDiagnosisProps {
   data: {

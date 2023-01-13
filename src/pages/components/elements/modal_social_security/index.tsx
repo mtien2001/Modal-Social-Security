@@ -1,15 +1,23 @@
 import React from "react";
-import { StyledModal, ModalHeader, ModalContainer, Img, Text } from "./styled";
+import {
+  ModalStyled as Modal,
+  ModalHeader,
+  ModalBody,
+  Img,
+  Text
+} from "../../../../styled";
 import { images } from "../../../../assets/images";
 import { TabDiagnosis } from "../../../../components/elements/tab_diagnosis";
-import { useFetchModalDetial } from "./hooks";
+import { useFetchModalDetial } from "../../../../hooks";
 
-export const Modal = (): JSX.Element => {
-  const { data, isOpen, toggleModal } = useFetchModalDetial();
+export const ModalSocialSecurity = (
+  props: ReturnType<typeof useFetchModalDetial>
+): JSX.Element => {
+  const { data, isOpen, toggleModal } = props;
 
   return (
     <div>
-      <StyledModal
+      <Modal
         isOpen={isOpen}
         onBackgroundClick={toggleModal}
         onEscapeKeydown={toggleModal}
@@ -27,10 +35,10 @@ export const Modal = (): JSX.Element => {
           </Text>
           <Img width={"130px"} src={images.staffRight} alt={""} />
         </ModalHeader>
-        <ModalContainer>
+        <ModalBody>
           <TabDiagnosis data={data} />
-        </ModalContainer>
-      </StyledModal>
+        </ModalBody>
+      </Modal>
     </div>
   );
 };

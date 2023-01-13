@@ -1,4 +1,64 @@
 import styled from "@emotion/styled";
+import Modal from "styled-react-modal";
+
+export const ModalStyled = Modal.styled`
+  max-width: 855px;
+  width: 100%;
+  max-height: 100%;
+  background-color: #91C5B6;
+  border-radius: 12px;
+  margin: 0px;
+  margin-left: 24px;
+  margin-right: 24px;
+  @media (max-width: 768px) {
+     font-size: 20px;
+     max-height: 692px;
+     overflow-y: scroll;
+  };
+`;
+
+export const ModalHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  gap: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  @media (max-width: 576px) {
+    height: 80px;
+  }
+`;
+
+export const ModalBody = styled.div`
+  padding: 0 24px 24px 24px;
+`;
+
+export const Img = styled.img`
+  width: ${props => props.width};
+  @media (max-width: 576px) {
+    display: none;
+  }
+`;
+
+export const Text = styled.h1<any>(
+  {
+    lineHeight: "100%",
+    margin: "0px"
+  },
+  props => ({
+    "@media(max-width: 960px)": {
+      fontSize: 22
+    },
+    "@media(max-width: 768px)": {
+      fontSize: 20
+    },
+    "@media(max-width: 576px)": {
+      fontSize: 18
+    },
+    ...props
+  })
+);
 
 export const Flex = styled.div`
   display: flex;
@@ -71,7 +131,7 @@ export const TextMoneyDesc = styled.span`
   }
 `;
 
-export const LabelMoney = styled.div`
+export const Label = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -82,9 +142,12 @@ export const LabelMoney = styled.div`
   @media (max-width: 768px) {
     justify-content: space-between;
   }
+  @media (max-width: 576px) {
+    justify-content: space-between;
+  }
 `;
 
-export const DivBudget = styled.div`
+export const BoxBudget = styled.div`
   display: flex;
   gap: 8px;
   padding: 16px 16px 10px 16px;
@@ -123,7 +186,7 @@ export const Button = styled.button`
   }
 `;
 
-export const DivDisable = styled.div`
+export const WrapDisable = styled.div`
   background-color: #91b3a9;
   max-width: 492px;
   max-height: 102px;
@@ -139,7 +202,7 @@ export const DivDisable = styled.div`
   }
 `;
 
-export const TabRight = styled.div`
+export const BoxRight = styled.div`
   align-items: center;
   background-color: #ffffff;
   max-width: 492px;
@@ -154,7 +217,7 @@ export const TabRight = styled.div`
   border-bottom-right-radius: 12px;
 `;
 
-export const TextTitleDisable = styled.p`
+export const TitleDisable = styled.p`
   font-family: Zen Maru Gothic;
   color: #fff;
   font-size: 16px;
@@ -165,7 +228,7 @@ export const TextTitleDisable = styled.p`
   margin-top: 4px;
 `;
 
-export const TextLabelDisable = styled.p`
+export const TextDisable = styled.p`
   font-family: Zen Maru Gothic;
   color: #fff;
   font-size: 10px;
@@ -173,4 +236,48 @@ export const TextLabelDisable = styled.p`
   font-weight: 300;
   margin: 0px;
   padding: 0 16px 16px 16px;
+`;
+
+export const WrapLeft = styled.div`
+  display: flex;
+  align-items: center;
+  background-color: #edf9f5;
+  min-width: 315px;
+  @media (max-width: 768px) {
+    min-width: 100%;
+    justify-content: center;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 12px;
+    max-height: 70px;
+  }
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 4px 10px rgba(30, 38, 46, 0.08);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+`;
+
+export const BoxLeft = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: fit-content;
+  padding: 16px;
+`;
+
+export const Title = styled.p`
+  font-family: Zen Maru Gothic;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #262e2c;
+  white-space: pre-line;
+  margin: 0;
+  margin-left: 12px;
+  @media (max-width: 960px) {
+    font-size: 18px;
+  }
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;

@@ -1,16 +1,17 @@
 import React from "react";
-import { Modal } from "./pages/components/elements/modal";
+import { ModalSocialSecurity } from "./pages/components/elements/modal_social_security";
 import { ModalProvider } from "styled-react-modal";
 import { ThemeProvider } from "@emotion/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "./theme";
+import { useFetchModalDetial } from "./hooks";
 
-function App() {
+function App(props: any) {
   return (
     <ModalProvider>
       <ThemeProvider theme={theme}>
         <ChakraProvider resetCSS theme={theme}>
-          <Modal />
+          <ModalSocialSecurity {...useFetchModalDetial(props)} />
         </ChakraProvider>
       </ThemeProvider>
     </ModalProvider>

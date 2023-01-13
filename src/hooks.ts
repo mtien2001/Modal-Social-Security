@@ -1,9 +1,11 @@
 import { dataMock } from "./contants";
 import { useEffect, useState } from "react";
 
-export const useFetchModalDetial = () => {
-  const data = dataMock;
+export const useFetchModalDetial = (props: any) => {
+  const { data: response, ...rest } = props
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const data = response ?? dataMock
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
@@ -16,6 +18,7 @@ export const useFetchModalDetial = () => {
   return {
     data,
     isOpen,
-    toggleModal
+    toggleModal,
+    ...rest
   };
 };
