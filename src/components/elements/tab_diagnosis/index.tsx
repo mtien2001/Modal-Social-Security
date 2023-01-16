@@ -1,10 +1,10 @@
 import React from "react";
 import { ITabDiagnosisProps } from "./types";
-import { WhenHeDied } from "../organisms/when_he_died";
-import { WhenMedicalExpensesBecomeHigh } from "../organisms/when_medical_expenses_become_high";
-import { WhenYouCanNotWork } from "../organisms/when_you_can_not_work";
-import { WhenInTrouble } from "../organisms/when_in_trouble";
-import { WhenChildBorn } from "../organisms/when_child_born";
+import { WhenHeDied } from "../when_he_died";
+import { WhenMedicalExpensesBecomeHigh } from "../when_medical_expenses_become_high";
+import { WhenYouCanNotWork } from "../when_you_can_not_work";
+import { WhenInTrouble } from "../when_in_trouble";
+import { WhenChildBorn } from "../when_child_born";
 import { images } from "../../../assets/images";
 
 export const TabDiagnosis: React.FC<ITabDiagnosisProps> = (

@@ -1,5 +1,5 @@
 import React from "react";
-import { ITabWhenChildBornProps } from "./types";
+import { ITabWhenInTroubleProps } from "./types";
 import {
     Flex,
     Budget,
@@ -11,13 +11,13 @@ import {
     BoxLeft,
     WrapLeft,
     Title, WrapRight, BoxBudget
-} from "../../../../styled";
-import {BoxDisable} from "../../molecules/box_disable";
+} from "./styled";
+import {BoxDisable} from "../box_disable";
 
-export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
+export const WhenInTrouble: React.FC<ITabWhenInTroubleProps> = (
   props
 ): JSX.Element => {
-  const { data, image, title } = props;
+  const { data, title, image } = props;
 
   return (
     <Flex>
@@ -37,16 +37,13 @@ export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
             <BoxBudget>
               {data?.budget?.map((item, index) => <Budget key={index}>{item}</Budget>)}
             </BoxBudget>
-            <Label>
-                <TextDetail>
-                    ひと月あたり&nbsp;
-                <TextMoneyDesc>最大</TextMoneyDesc>
-                <TextMoney>{data?.money}</TextMoney>
-                <TextMoneyDesc>万円</TextMoneyDesc>
-                </TextDetail>
-
-                <Button>詳しくみる</Button>
-            </Label>
+              <Label>
+                  <TextDetail>ひと月あたり&nbsp;
+                  <TextMoney>{data?.money}</TextMoney>
+                  <TextMoneyDesc>万円</TextMoneyDesc>
+                  </TextDetail>
+                  <Button>詳しくみる</Button>
+              </Label>
           </WrapRight>
       )}
     </Flex>

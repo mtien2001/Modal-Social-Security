@@ -1,4 +1,4 @@
-import { IModalData } from "../../../../types";
+import { IModalData } from "../../../types";
 
 export interface ITabWhenYouCanNotWorkProps {
   data: IModalData;

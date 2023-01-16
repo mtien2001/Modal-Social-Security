@@ -1,19 +1,14 @@
 import React from "react";
-import {
-  FlexDiagnosis,
-  TitleDisable,
-  TextDisable,
-  WrapDisable
-} from "../../../../styled";
-import { images } from "../../../../assets/images";
+import { WrapDisable, Flex, TitleDisable, TextDisable } from "./styled";
+import { images } from "../../../assets/images";
 
 export const BoxDisable = () => {
   return (
     <WrapDisable>
-      <FlexDiagnosis>
+      <Flex>
         <img width={"20px"} src={images.exclamationMarkIcon} alt={""} />
         <TitleDisable>保障の対象外です</TitleDisable>
-      </FlexDiagnosis>
+      </Flex>
       <TextDisable>
         入力内容と本シミュレーションの算出条件を考慮すると、対象外の可能性が高いです。
         ご家族の詳細情報やお住いの市区町村などの条件により、対象になる場合もあります。
