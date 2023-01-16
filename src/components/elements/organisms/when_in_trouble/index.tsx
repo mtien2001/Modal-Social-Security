@@ -1,5 +1,5 @@
 import React from "react";
-import { ITabWhenYouCanNotWorkProps } from "./types";
+import { ITabWhenInTroubleProps } from "./types";
 import {
     Flex,
     Budget,
@@ -12,9 +12,9 @@ import {
     WrapLeft,
     Title, WrapRight, BoxBudget
 } from "../../../../styled";
-import {BoxDisable} from "../box_disable";
+import {BoxDisable} from "../../molecules/box_disable";
 
-export const WhenYouCanNotWork: React.FC<ITabWhenYouCanNotWorkProps> = (
+export const WhenInTrouble: React.FC<ITabWhenInTroubleProps> = (
   props
 ): JSX.Element => {
   const { data, title, image } = props;
@@ -37,15 +37,13 @@ export const WhenYouCanNotWork: React.FC<ITabWhenYouCanNotWorkProps> = (
             <BoxBudget>
               {data?.budget?.map((item, index) => <Budget key={index}>{item}</Budget>)}
             </BoxBudget>
-            <Label>
-              <TextDetail>
-                ひと月あたり&nbsp;
-                <TextMoney>{data?.money}</TextMoney>
-                <TextMoneyDesc>万円</TextMoneyDesc>
-              </TextDetail>
-
-                <Button>詳しくみる</Button>
-            </Label>
+              <Label>
+                  <TextDetail>ひと月あたり&nbsp;
+                  <TextMoney>{data?.money}</TextMoney>
+                  <TextMoneyDesc>万円</TextMoneyDesc>
+                  </TextDetail>
+                  <Button>詳しくみる</Button>
+              </Label>
           </WrapRight>
       )}
     </Flex>

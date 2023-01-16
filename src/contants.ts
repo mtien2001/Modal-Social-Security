@@ -1,6 +1,8 @@
 export const dataMock = {
   whenHeDied: {
-    isDisable: true
+    isDisable: true,
+    budget: undefined,
+    money: undefined
   },
   whenMedicalExpensesBecomeHigh: {
     isDisable: false,
@@ -8,7 +10,9 @@ export const dataMock = {
     money: 48
   },
   whenYouCanNotWork: {
-    isDisable: true
+    isDisable: true,
+    budget: undefined,
+    money: undefined
   },
   whenInTrouble: {
     isDisable: false,

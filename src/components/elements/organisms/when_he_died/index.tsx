@@ -1,5 +1,5 @@
 import React from "react";
-import { ITabWhenMedicalExpensesBecomeHighProps } from "./types";
+import { ITabWhenHeDiedProps } from "./types";
 import {
     Flex,
     Budget,
@@ -12,12 +12,12 @@ import {
     WrapLeft,
     Title, WrapRight, BoxBudget
 } from "../../../../styled";
-import {BoxDisable} from "../box_disable";
+import {BoxDisable} from "../../molecules/box_disable";
 
-export const WhenMedicalExpensesBecomeHigh: React.FC<ITabWhenMedicalExpensesBecomeHighProps> = (
+export const WhenHeDied: React.FC<ITabWhenHeDiedProps> = (
   props
 ): JSX.Element => {
-  const { data, title, image } = props;
+  const { data, image, title } = props;
 
   return (
     <Flex>

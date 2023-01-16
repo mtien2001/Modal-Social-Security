@@ -1,5 +1,5 @@
 import React from "react";
-import { ITabWhenChildBornProps } from "./types";
+import { ITabWhenMedicalExpensesBecomeHighProps } from "./types";
 import {
     Flex,
     Budget,
@@ -12,12 +12,12 @@ import {
     WrapLeft,
     Title, WrapRight, BoxBudget
 } from "../../../../styled";
-import {BoxDisable} from "../box_disable";
+import {BoxDisable} from "../../molecules/box_disable";
 
-export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
+export const WhenMedicalExpensesBecomeHigh: React.FC<ITabWhenMedicalExpensesBecomeHighProps> = (
   props
 ): JSX.Element => {
-  const { data, image, title } = props;
+  const { data, title, image } = props;
 
   return (
     <Flex>
@@ -38,12 +38,11 @@ export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
               {data?.budget?.map((item, index) => <Budget key={index}>{item}</Budget>)}
             </BoxBudget>
             <Label>
-                <TextDetail>
-                    ひと月あたり&nbsp;
-                <TextMoneyDesc>最大</TextMoneyDesc>
+              <TextDetail>
+                ひと月あたり&nbsp;
                 <TextMoney>{data?.money}</TextMoney>
                 <TextMoneyDesc>万円</TextMoneyDesc>
-                </TextDetail>
+              </TextDetail>
 
                 <Button>詳しくみる</Button>
             </Label>
