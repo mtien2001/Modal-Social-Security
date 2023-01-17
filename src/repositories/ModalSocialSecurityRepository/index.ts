@@ -1,4 +1,3 @@
-import { convertData } from "./convert";
 import { dataMock } from "../../contants";
 import axios from "axios";
 import {
@@ -10,8 +9,14 @@ export class ModalSocialSecurityRepository {
   async getModalSocialSecurityResult(
     _params: IModalSocialSecurityParams
   ): Promise<IModalSocialSecurityResponse> {
-    const response = await axios.get("https://modal_social_security");
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/todos/1"
+    );
 
-    return convertData(dataMock.data);
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(dataMock);
+      }, 1500);
+    });
   }
 }

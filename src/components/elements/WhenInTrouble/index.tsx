@@ -26,7 +26,7 @@ export const WhenInTrouble: React.FC<ITabWhenInTroubleProps> = (
             <Title>障害状態になった時</Title>
         </BoxLeft>
 
-      {data.isDisable ? (
+      {data?.isDisable ? (
               <BoxDisable />
       ) : (
           <BoxRight>

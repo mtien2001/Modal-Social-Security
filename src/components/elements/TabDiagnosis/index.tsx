@@ -13,13 +13,13 @@ export const TabDiagnosis: React.FC<ITabDiagnosisProps> = (
 
   return (
     <div>
-      <WhenHeDied data={data.whenHeDied} />
+      <WhenHeDied data={data?.whenHeDied} />
       <WhenMedicalExpensesBecomeHigh
-        data={data.whenMedicalExpensesBecomeHigh}
+        data={data?.whenMedicalExpensesBecomeHigh}
       />
-      <WhenYouCanNotWork data={data.whenYouCanNotWork} />
-      <WhenInTrouble data={data.whenInTrouble} />
-      <WhenChildBorn data={data.whenChildBorn} />
+      <WhenYouCanNotWork data={data?.whenYouCanNotWork} />
+      <WhenInTrouble data={data?.whenInTrouble} />
+      <WhenChildBorn data={data?.whenChildBorn} />
     </div>
   );
 };

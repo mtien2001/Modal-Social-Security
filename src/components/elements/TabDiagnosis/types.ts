@@ -1,7 +1,7 @@
 import { IModalData } from "../../../pages/components/elements/ModalSocialSecurity/types";
 
 export interface ITabDiagnosisProps {
-  data: {
+  data?: {
     whenHeDied: IModalData;
     whenMedicalExpensesBecomeHigh: IModalData;
     whenYouCanNotWork: IModalData;

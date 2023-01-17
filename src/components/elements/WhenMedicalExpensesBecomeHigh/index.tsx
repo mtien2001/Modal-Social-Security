@@ -30,7 +30,7 @@ export const WhenMedicalExpensesBecomeHigh: React.FC<ITabWhenMedicalExpensesBeco
             </Title>
         </BoxLeft>
 
-      {data.isDisable ? (
+      {data?.isDisable ? (
               <BoxDisable />
       ) : (
           <BoxRight>

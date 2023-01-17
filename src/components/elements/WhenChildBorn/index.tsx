@@ -26,7 +26,7 @@ export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
             <Title>子どもが生まれる時</Title>
         </BoxLeft>
 
-      {data.isDisable ? (
+      {data?.isDisable ? (
               <BoxDisable />
       ) : (
           <BoxRight>

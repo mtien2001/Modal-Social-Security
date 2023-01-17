@@ -26,7 +26,7 @@ export const WhenYouCanNotWork: React.FC<ITabWhenYouCanNotWorkProps> = (
             <Title>働けなくなった時</Title>
         </BoxLeft>
 
-      {data.isDisable ? (
+      {data?.isDisable ? (
               <BoxDisable />
       ) : (
           <BoxRight>

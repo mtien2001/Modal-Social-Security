@@ -26,7 +26,7 @@ export const WhenHeDied: React.FC<ITabWhenHeDiedProps> = (
             <Title>亡くなった時</Title>
         </BoxLeft>
 
-      {data.isDisable ? (
+      {data?.isDisable ? (
               <BoxDisable />
       ) : (
           <BoxRight>

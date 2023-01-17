@@ -1,9 +1,16 @@
 import { AxiosError } from "axios";
 
 export interface IModalData {
-  isDisable?: boolean;
+  isDisable: boolean;
   budget?: string[];
   money?: number;
+}
+
+export interface useModalSocialSecurityProps {
+  data?: IModalSocialSecurityResponse;
+  isLoading?: boolean;
+  isOpen?: boolean;
+  toggleModal?: () => void;
 }
 
 export interface IModalSocialSecurityResponse {

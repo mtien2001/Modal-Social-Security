@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
-import { ModalSocialSecurityRepository } from "../../../../repositories/ModalSocialSecurityRepository";
 import { useQuery } from "@tanstack/react-query";
 import { modalSocialSecurityQueryKey } from "../../../../repositories/ModalSocialSecurityRepository/query_key";
 import { AxiosError } from "axios";
-import { IUseFetchModalSocialSecurityDetailProps } from "./types";
+import {
+  IUseFetchModalSocialSecurityDetailProps,
+  useModalSocialSecurityProps
+} from "./types";
+import { modalSocialSecurityRepository } from "../../../../repositories";
 
 export const useFetchModalDetail = (
   props: IUseFetchModalSocialSecurityDetailProps
@@ -12,7 +15,7 @@ export const useFetchModalDetail = (
 
   return useQuery(
     modalSocialSecurityQueryKey.getModalSocialSecurityResult(),
-    () => ModalSocialSecurityRepository.getModalSocialSecurityResult({}),
+    () => modalSocialSecurityRepository.getModalSocialSecurityResult({}),
     {
       onSuccess: data => {
         onSuccess(data);
@@ -24,7 +27,8 @@ export const useFetchModalDetail = (
   );
 };
 
-export const useModalSocialSecurity = () => {
+export const useModalSocialSecurity = (props: useModalSocialSecurityProps) => {
+  const { data: response, ...rest } = props;
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { data, isLoading } = useFetchModalDetail({});
 
@@ -40,6 +44,7 @@ export const useModalSocialSecurity = () => {
     data,
     isLoading,
     isOpen,
-    toggleModal
+    toggleModal,
+    ...rest
   };
 };
