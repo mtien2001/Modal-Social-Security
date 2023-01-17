@@ -1,4 +1,4 @@
-import { IModalSocialSecurityResponse } from "./pages/components/elements/ModalSocialSecurity/types";
+import { IModalSocialSecurityResponse } from "./types";
 
 export const dataMock: IModalSocialSecurityResponse = {
   data: {
@@ -9,7 +9,7 @@ export const dataMock: IModalSocialSecurityResponse = {
     },
     whenMedicalExpensesBecomeHigh: {
       isDisable: false,
-      budget: ["高額療養費制度"],
+      budget: ["high_medical_expenses_system"],
       money: 48
     },
     whenYouCanNotWork: {
@@ -19,12 +19,16 @@ export const dataMock: IModalSocialSecurityResponse = {
     },
     whenInTrouble: {
       isDisable: false,
-      budget: ["障害基礎年金", "障害厚生年金"],
+      budget: ["disability_basic_pension", "disability_welfare_pension"],
       money: 30
     },
     whenChildBorn: {
       isDisable: false,
-      budget: ["出産育児一時金", "出産手当金", "育児休業給付金"],
+      budget: [
+        "childbirth_and_childcare_lump_sum_grant",
+        "maternity_allowance",
+        "childcare_leave_benefits"
+      ],
       money: 260
     }
   }

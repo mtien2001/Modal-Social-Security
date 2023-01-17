@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useMemo} from "react";
 import { ITabWhenHeDiedProps } from "./types";
 import {
     Flex,
@@ -19,31 +19,35 @@ export const WhenHeDied: React.FC<ITabWhenHeDiedProps> = (
 ): JSX.Element => {
   const { data } = props;
 
+  const renderBoxRight = useMemo(() => {
+     if (data.isDisable) {
+         return <BoxDisable />
+     }
+     return (
+         <BoxRight>
+             <BoxBudget>
+                 {data.budget?.map((item, index) => <Budget key={index}>{item}</Budget>)}
+             </BoxBudget>
+             <Label>
+                 <TextDetail>
+                     ひと月あたり&nbsp;
+                 </TextDetail>
+                 <TextMoney>{data.money}</TextMoney>
+                 <TextMoneyDesc>万円</TextMoneyDesc>
+
+                 <Button>詳しくみる</Button>
+             </Label>
+         </BoxRight>
+     )
+ }, [data])
+
   return (
     <Flex>
         <BoxLeft>
             <img src={images.whenHeDiedIcon} width={"48px"} alt={""} />
             <Title>亡くなった時</Title>
         </BoxLeft>
-
-      {data?.isDisable ? (
-              <BoxDisable />
-      ) : (
-          <BoxRight>
-            <BoxBudget>
-              {data?.budget?.map((item, index) => <Budget key={index}>{item}</Budget>)}
-            </BoxBudget>
-            <Label>
-                <TextDetail>
-                    ひと月あたり&nbsp;
-                </TextDetail>
-                <TextMoney>{data?.money}</TextMoney>
-                <TextMoneyDesc>万円</TextMoneyDesc>
-
-                <Button>詳しくみる</Button>
-            </Label>
-          </BoxRight>
-      )}
+        {renderBoxRight}
     </Flex>
   );
 };

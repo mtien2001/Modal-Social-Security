@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useMemo} from "react";
 import { ITabWhenMedicalExpensesBecomeHighProps } from "./types";
 import {
     Flex,
@@ -19,6 +19,28 @@ export const WhenMedicalExpensesBecomeHigh: React.FC<ITabWhenMedicalExpensesBeco
 ): JSX.Element => {
   const { data  } = props;
 
+    const renderBoxRight = useMemo(() => {
+        if (data.isDisable) {
+            return <BoxDisable />
+        }
+        return (
+            <BoxRight>
+                <BoxBudget>
+                    {data.budget?.map((item, index) => <Budget key={index}>{item}</Budget>)}
+                </BoxBudget>
+                <Label>
+                    <TextDetail>
+                        ひと月あたり&nbsp;
+                    </TextDetail>
+                    <TextMoney>{data.money}</TextMoney>
+                    <TextMoneyDesc>万円</TextMoneyDesc>
+
+                    <Button>詳しくみる</Button>
+                </Label>
+            </BoxRight>
+        )
+    }, [data])
+
   return (
     <Flex>
         <BoxLeft>
@@ -29,25 +51,7 @@ export const WhenMedicalExpensesBecomeHigh: React.FC<ITabWhenMedicalExpensesBeco
                 医療費が高額になった時
             </Title>
         </BoxLeft>
-
-      {data?.isDisable ? (
-              <BoxDisable />
-      ) : (
-          <BoxRight>
-            <BoxBudget>
-              {data?.budget?.map((item, index) => <Budget key={index}>{item}</Budget>)}
-            </BoxBudget>
-            <Label>
-                <TextDetail>
-                    ひと月あたり&nbsp;
-                </TextDetail>
-                <TextMoney>{data?.money}</TextMoney>
-                <TextMoneyDesc>万円</TextMoneyDesc>
-
-                <Button>詳しくみる</Button>
-            </Label>
-          </BoxRight>
-      )}
+        {renderBoxRight}
     </Flex>
   );
 };

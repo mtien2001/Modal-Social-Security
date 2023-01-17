@@ -1,6 +1,10 @@
-import { IModalData } from "../../pages/components/elements/ModalSocialSecurity/types";
-
 export interface IModalSocialSecurityParams {}
+
+export interface IModalData {
+  isDisable: boolean;
+  budget: string[] | undefined;
+  money: number | undefined;
+}
 
 export interface IModalSocialSecurityResponse {
   data: {

@@ -1,4 +1,4 @@
-import { dataMock } from "../../contants";
+import { dataMock } from "./contants";
 import axios from "axios";
 import {
   IModalSocialSecurityParams,

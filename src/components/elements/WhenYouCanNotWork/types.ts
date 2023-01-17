@@ -1,5 +1,7 @@
-import { IModalData } from "../../../pages/components/elements/ModalSocialSecurity/types";
-
 export interface ITabWhenYouCanNotWorkProps {
-  data?: IModalData;
+  data: {
+    isDisable: boolean;
+    budget: string[] | undefined;
+    money: number | undefined;
+  };
 }
