@@ -1,5 +1,5 @@
 import React from "react";
-import { ModalSocialSecurityDiagnosis } from "./pages/ModalSocialSecurity";
+import { ModalSocialSecurityDiagnosis } from "./pages/modalSocialSecurity";
 import { ModalProvider } from "styled-react-modal";
 import { ThemeProvider } from "@emotion/react";
 import { ChakraProvider } from "@chakra-ui/react";
