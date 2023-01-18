@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ModalStyled as Modal,
   ModalHeader,
@@ -19,6 +19,12 @@ const Component = (
   const onClose = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsOpen(!isOpen);
+    }, 3000);
+  }, []);
 
   return (
     <Modal

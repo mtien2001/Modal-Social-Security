@@ -39,22 +39,16 @@ export const Box = styled.div`
   border-bottom-right-radius: 12px;
 `;
 
-export const Button = styled.button`
-  background: linear-gradient(180deg, #d8ba81 0%, #ab8f5a 100%);
-  min-width: 140px;
-  width: fit-content;
-  min-height: 32px;
-  height: fit-content;
-  border: 1px solid #c5b391;
-  border-radius: 24px;
-  color: #ffffff;
-  cursor: pointer;
-  margin-left: 16px;
-  font-size: 16px;
-  @media (max-width: 576px) {
-    font-size: 14px;
-  }
-`;
+export const Button = styled.p<any>(
+  {
+    lineHeight: "100%",
+    margin: "0px",
+    padding: "0px"
+  },
+  props => ({
+    ...props
+  })
+);
 
 export const Label = styled.div`
   display: flex;
