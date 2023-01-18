@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   ModalStyled as Modal,
   ModalHeader,
@@ -7,19 +7,24 @@ import {
   Text
 } from "./styled";
 import { images } from "../../assets/images";
-import { TabDiagnosis } from "../../components/elements/TabDiagnosis";
+import { TabDiagnosis } from "./components/elements/TabDiagnosis";
 import { useModalSocialSecurity } from "./hooks";
 
-const ModalSocialSecurity = (
+const Component = (
   props: ReturnType<typeof useModalSocialSecurity>
 ): JSX.Element => {
-  const { data, isOpen, toggleModal } = props;
+  const { data } = props;
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const onClose = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Modal
       isOpen={isOpen}
-      onBackgroundClick={toggleModal}
-      onEscapeKeydown={toggleModal}
+      onBackgroundClick={onClose}
+      onEscapeKeydown={onClose}
     >
       <ModalHeader>
         <Img width={"133.17px"} src={images.staffLeft} alt={""} />
@@ -42,5 +47,5 @@ const ModalSocialSecurity = (
 };
 
 export const ModalSocialSecurityDiagnosis = (): JSX.Element => {
-  return <ModalSocialSecurity {...useModalSocialSecurity()} />;
+  return <Component {...useModalSocialSecurity()} />;
 };

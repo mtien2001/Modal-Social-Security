@@ -25,23 +25,13 @@ export const Flex = styled.div`
   padding-bottom: 8px;
 `;
 
-export const Title = styled.p`
-  font-family: Zen Maru Gothic;
-  color: #fff;
-  font-size: 16px;
-  line-height: 100%;
-  font-weight: 500;
-  margin: 0px;
-  margin-left: 6px;
-  margin-top: 4px;
-`;
-
-export const Text = styled.p`
-  font-family: Zen Maru Gothic;
-  color: #fff;
-  font-size: 10px;
-  line-height: 150%;
-  font-weight: 300;
-  margin: 0px;
-  padding: 0 16px 16px 16px;
-`;
+export const Text = styled.p<any>(
+  {
+    lineHeight: "100%",
+    margin: "0px",
+    padding: "0px"
+  },
+  props => ({
+    ...props
+  })
+);
