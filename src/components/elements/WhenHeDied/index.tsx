@@ -1,11 +1,11 @@
 import React, { useMemo } from "react";
-import { ITabWhenInTroubleProps } from "./types";
+import { ITabWhenHeDiedProps } from "./types";
 import { Flex, Box, Text } from "./styled";
-import { NotWarranty } from "../../../../../components/elements/NotWarranty";
-import { images } from "../../../../../assets/images";
-import { Warranty } from "../../../../../components/elements/Warranty";
+import { NotWarranty } from "../NotWarranty";
+import { images } from "../../../assets/images";
+import { Warranty } from "../Warranty";
 
-export const WhenInTrouble: React.FC<ITabWhenInTroubleProps> = (
+export const WhenHeDied: React.FC<ITabWhenHeDiedProps> = (
   props
 ): JSX.Element => {
   const { data } = props;
@@ -19,7 +19,7 @@ export const WhenInTrouble: React.FC<ITabWhenInTroubleProps> = (
         <Warranty
           budget={data.budget}
           money={data.money}
-          text={"障害等級2級の場合、ひと月あたり"}
+          text={"ひと月あたり自己負担上限額"}
         />
       );
     },
@@ -29,7 +29,7 @@ export const WhenInTrouble: React.FC<ITabWhenInTroubleProps> = (
   return (
     <Flex>
       <Box>
-        <img src={images.whenYouCanNotWorkIcon} width={"48px"} alt={""} />
+        <img src={images.whenHeDiedIcon} width={"48px"} alt={""} />
         <Text
           fontFamily={"Zen Maru Gothic"}
           fontWeight={"500"}
@@ -39,7 +39,7 @@ export const WhenInTrouble: React.FC<ITabWhenInTroubleProps> = (
           whiteSpace={"pre-line"}
           marginLeft={"12px"}
         >
-          障害状態になった時
+          亡くなった時
         </Text>
       </Box>
       {renderBoxRight}

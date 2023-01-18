@@ -1,10 +1,10 @@
 import React from "react";
 import { ITabDiagnosisProps } from "./types";
-import { WhenHeDied } from "../WhenHeDied";
-import { WhenMedicalExpensesBecomeHigh } from "../WhenMedicalExpensesBecomeHigh";
-import { WhenYouCanNotWork } from "../WhenYouCanNotWork";
-import { WhenInTrouble } from "../WhenInTrouble";
-import { WhenChildBorn } from "../WhenChildBorn";
+import { WhenHeDied } from "../../../../../components/elements/WhenHeDied";
+import { WhenMedicalExpensesBecomeHigh } from "../../../../../components/elements/WhenMedicalExpensesBecomeHigh";
+import { WhenYouCanNotWork } from "../../../../../components/elements/WhenYouCanNotWork";
+import { WhenInTrouble } from "../../../../../components/elements/WhenInTrouble";
+import { WhenChildBorn } from "../../../../../components/elements/WhenChildBorn";
 
 export const TabDiagnosis: React.FC<ITabDiagnosisProps> = (
   props

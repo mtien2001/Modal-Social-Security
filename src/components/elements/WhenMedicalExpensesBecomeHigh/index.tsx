@@ -1,13 +1,13 @@
 import React, { useMemo } from "react";
-import { ITabWhenChildBornProps } from "./types";
+import { ITabWhenMedicalExpensesBecomeHighProps } from "./types";
 import { Flex, Box, Text } from "./styled";
-import { NotWarranty } from "../../../../../components/elements/NotWarranty";
-import { images } from "../../../../../assets/images";
-import { Warranty } from "../../../../../components/elements/Warranty";
+import { NotWarranty } from "../NotWarranty";
+import { images } from "../../../assets/images";
+import { Warranty } from "../Warranty";
 
-export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
-  props
-): JSX.Element => {
+export const WhenMedicalExpensesBecomeHigh: React.FC<
+  ITabWhenMedicalExpensesBecomeHighProps
+> = (props): JSX.Element => {
   const { data } = props;
 
   const renderBoxRight = useMemo(
@@ -19,8 +19,7 @@ export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
         <Warranty
           budget={data.budget}
           money={data.money}
-          text={"すべての合計で"}
-          textDesc={"最大"}
+          text={"ひと月あたり"}
         />
       );
     },
@@ -30,7 +29,11 @@ export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
   return (
     <Flex>
       <Box>
-        <img src={images.whenChildBornIcon} width={"48px"} alt={""} />
+        <img
+          src={images.whenMedicalExpensesBecomeHighIcon}
+          width={"48px"}
+          alt={""}
+        />
         <Text
           fontFamily={"Zen Maru Gothic"}
           fontWeight={"500"}
@@ -40,7 +43,9 @@ export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
           whiteSpace={"pre-line"}
           marginLeft={"12px"}
         >
-          子どもが生まれる時
+          病気やケガで
+          <br />
+          医療費が高額になった時
         </Text>
       </Box>
       {renderBoxRight}
