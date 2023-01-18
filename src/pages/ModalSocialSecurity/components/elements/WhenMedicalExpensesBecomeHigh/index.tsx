@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { ITabWhenMedicalExpensesBecomeHighProps } from "./types";
-import { Flex, BoxLeft, Text } from "./styled";
+import { Flex, Box, Text } from "./styled";
 import { NotWarranty } from "../../../../../components/elements/NotWarranty";
 import { images } from "../../../../../assets/images";
 import { Warranty } from "../../../../../components/elements/Warranty";
@@ -28,7 +28,7 @@ export const WhenMedicalExpensesBecomeHigh: React.FC<
 
   return (
     <Flex>
-      <BoxLeft>
+      <Box>
         <img
           src={images.whenMedicalExpensesBecomeHighIcon}
           width={"48px"}
@@ -47,7 +47,7 @@ export const WhenMedicalExpensesBecomeHigh: React.FC<
           <br />
           医療費が高額になった時
         </Text>
-      </BoxLeft>
+      </Box>
       {renderBoxRight}
     </Flex>
   );

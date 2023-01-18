@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { ITabWhenYouCanNotWorkProps } from "./types";
-import { Flex, BoxLeft, Text } from "./styled";
+import { Flex, Box, Text } from "./styled";
 import { NotWarranty } from "../../../../../components/elements/NotWarranty";
 import { images } from "../../../../../assets/images";
 import { Warranty } from "../../../../../components/elements/Warranty";
@@ -28,7 +28,7 @@ export const WhenYouCanNotWork: React.FC<ITabWhenYouCanNotWorkProps> = (
 
   return (
     <Flex>
-      <BoxLeft>
+      <Box>
         <img src={images.whenYouCanNotWorkIcon} width={"48px"} alt={""} />
         <Text
           fontFamily={"Zen Maru Gothic"}
@@ -41,7 +41,7 @@ export const WhenYouCanNotWork: React.FC<ITabWhenYouCanNotWorkProps> = (
         >
           働けなくなった時
         </Text>
-      </BoxLeft>
+      </Box>
       {renderBoxRight}
     </Flex>
   );

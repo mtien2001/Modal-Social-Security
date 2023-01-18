@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { ITabWhenChildBornProps } from "./types";
-import { Flex, BoxLeft, Text } from "./styled";
+import { Flex, Box, Text } from "./styled";
 import { NotWarranty } from "../../../../../components/elements/NotWarranty";
 import { images } from "../../../../../assets/images";
 import { Warranty } from "../../../../../components/elements/Warranty";
@@ -29,7 +29,7 @@ export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
 
   return (
     <Flex>
-      <BoxLeft>
+      <Box>
         <img src={images.whenChildBornIcon} width={"48px"} alt={""} />
         <Text
           fontFamily={"Zen Maru Gothic"}
@@ -42,7 +42,7 @@ export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
         >
           子どもが生まれる時
         </Text>
-      </BoxLeft>
+      </Box>
       {renderBoxRight}
     </Flex>
   );

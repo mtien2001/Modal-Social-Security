@@ -11,7 +11,7 @@ export const Flex = styled.div`
   min-height: 102px;
 `;
 
-export const BoxLeft = styled.div`
+export const Box = styled.div`
   display: flex;
   align-items: center;
   background-color: #edf9f5;
