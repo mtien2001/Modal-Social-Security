@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Flex, Text } from "./styled";
 import { images } from "../../../assets/images";
 
-export const BoxDisable = () => {
+export const NotWarranty = (): JSX.Element => {
   return (
     <Box>
       <Flex>

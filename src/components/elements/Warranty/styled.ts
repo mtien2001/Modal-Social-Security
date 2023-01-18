@@ -22,7 +22,7 @@ export const Budget = styled.div`
   line-height: 100%;
 `;
 
-export const BoxRight = styled.div`
+export const Box = styled.div`
   align-items: center;
   background-color: #ffffff;
   max-width: 492px;

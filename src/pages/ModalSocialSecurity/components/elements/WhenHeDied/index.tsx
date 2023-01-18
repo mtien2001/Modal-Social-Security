@@ -1,9 +1,9 @@
 import React, { useMemo } from "react";
 import { ITabWhenHeDiedProps } from "./types";
 import { Flex, BoxLeft, Text } from "./styled";
-import { BoxDisable } from "../../../../../components/elements/BoxDisable";
+import { NotWarranty } from "../../../../../components/elements/NotWarranty";
 import { images } from "../../../../../assets/images";
-import { BoxActive } from "../../../../../components/elements/BoxActive";
+import { Warranty } from "../../../../../components/elements/Warranty";
 
 export const WhenHeDied: React.FC<ITabWhenHeDiedProps> = (
   props
@@ -13,10 +13,10 @@ export const WhenHeDied: React.FC<ITabWhenHeDiedProps> = (
   const renderBoxRight = useMemo(
     () => {
       if (data.isDisable) {
-        return <BoxDisable />;
+        return <NotWarranty />;
       }
       return (
-        <BoxActive
+        <Warranty
           budget={data.budget}
           money={data.money}
           text={"ひと月あたり自己負担上限額"}

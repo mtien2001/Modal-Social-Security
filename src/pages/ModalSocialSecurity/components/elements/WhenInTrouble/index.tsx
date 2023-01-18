@@ -1,9 +1,9 @@
 import React, { useMemo } from "react";
 import { ITabWhenInTroubleProps } from "./types";
 import { Flex, BoxLeft, Text } from "./styled";
-import { BoxDisable } from "../../../../../components/elements/BoxDisable";
+import { NotWarranty } from "../../../../../components/elements/NotWarranty";
 import { images } from "../../../../../assets/images";
-import { BoxActive } from "../../../../../components/elements/BoxActive";
+import { Warranty } from "../../../../../components/elements/Warranty";
 
 export const WhenInTrouble: React.FC<ITabWhenInTroubleProps> = (
   props
@@ -13,10 +13,10 @@ export const WhenInTrouble: React.FC<ITabWhenInTroubleProps> = (
   const renderBoxRight = useMemo(
     () => {
       if (data.isDisable) {
-        return <BoxDisable />;
+        return <NotWarranty />;
       }
       return (
-        <BoxActive
+        <Warranty
           budget={data.budget}
           money={data.money}
           text={"障害等級2級の場合、ひと月あたり"}
