@@ -10,7 +10,7 @@ export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
 ): JSX.Element => {
   const { data } = props;
 
-  const renderBoxRight = useMemo(
+  const renderAmountYouReceive = useMemo(
     () => {
       if (data.isDisable) {
         return <NotWarranty />;
@@ -43,7 +43,7 @@ export const WhenChildBorn: React.FC<ITabWhenChildBornProps> = (
           子どもが生まれる時
         </Text>
       </Box>
-      {renderBoxRight}
+      {renderAmountYouReceive}
     </Flex>
   );
 };

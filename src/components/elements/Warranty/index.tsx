@@ -56,7 +56,7 @@ export const Warranty: React.FC<IBoxActiveProps> = (props): JSX.Element => {
           background={'linear-gradient(180deg, #d8ba81 0%, #ab8f5a 100%)'}
           minWidth={'140px'}
           width={'fit-content'}
-          min-height={'32px'}
+          minHeight={'32px'}
           height={'fit-content'}
           border={'1px solid #c5b391'}
           borderRadius={'24px'}

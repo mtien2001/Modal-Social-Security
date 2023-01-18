@@ -10,7 +10,7 @@ export const WhenMedicalExpensesBecomeHigh: React.FC<
 > = (props): JSX.Element => {
   const { data } = props;
 
-  const renderBoxRight = useMemo(
+  const renderAmountYouReceive = useMemo(
     () => {
       if (data.isDisable) {
         return <NotWarranty />;
@@ -48,7 +48,7 @@ export const WhenMedicalExpensesBecomeHigh: React.FC<
           医療費が高額になった時
         </Text>
       </Box>
-      {renderBoxRight}
+      {renderAmountYouReceive}
     </Flex>
   );
 };

@@ -10,7 +10,7 @@ export const WhenHeDied: React.FC<ITabWhenHeDiedProps> = (
 ): JSX.Element => {
   const { data } = props;
 
-  const renderBoxRight = useMemo(
+  const renderAmountYouReceive = useMemo(
     () => {
       if (data.isDisable) {
         return <NotWarranty />;
@@ -42,7 +42,7 @@ export const WhenHeDied: React.FC<ITabWhenHeDiedProps> = (
           亡くなった時
         </Text>
       </Box>
-      {renderBoxRight}
+      {renderAmountYouReceive}
     </Flex>
   );
 };

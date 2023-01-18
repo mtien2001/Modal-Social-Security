@@ -10,7 +10,7 @@ export const WhenInTrouble: React.FC<ITabWhenInTroubleProps> = (
 ): JSX.Element => {
   const { data } = props;
 
-  const renderBoxRight = useMemo(
+  const renderAmountYouReceive = useMemo(
     () => {
       if (data.isDisable) {
         return <NotWarranty />;
@@ -42,7 +42,7 @@ export const WhenInTrouble: React.FC<ITabWhenInTroubleProps> = (
           障害状態になった時
         </Text>
       </Box>
-      {renderBoxRight}
+      {renderAmountYouReceive}
     </Flex>
   );
 };

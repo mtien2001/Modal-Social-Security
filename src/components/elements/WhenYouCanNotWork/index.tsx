@@ -10,7 +10,7 @@ export const WhenYouCanNotWork: React.FC<ITabWhenYouCanNotWorkProps> = (
 ): JSX.Element => {
   const { data } = props;
 
-  const renderBoxRight = useMemo(
+  const renderAmountYouReceive = useMemo(
     () => {
       if (data.isDisable) {
         return <NotWarranty />;
@@ -42,7 +42,7 @@ export const WhenYouCanNotWork: React.FC<ITabWhenYouCanNotWorkProps> = (
           働けなくなった時
         </Text>
       </Box>
-      {renderBoxRight}
+      {renderAmountYouReceive}
     </Flex>
   );
 };
