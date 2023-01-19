@@ -9,9 +9,7 @@ export class ModalSocialSecurityRepository {
     _params: IModalSocialSecurityParams
   ): Promise<IModalSocialSecurityResponse> {
     return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(dataMock);
-      }, 1500);
+      resolve(dataMock);
     });
   }
 }
