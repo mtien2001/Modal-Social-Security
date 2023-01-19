@@ -1,4 +1,4 @@
-export const getLabels = (data: string[] | undefined) => {
+export const getLabels = (data: any) => {
   if (data) {
     const labels = data.map((item: string) => {
       if (item === "survivors_basic_pension") return "遺族基礎年金";

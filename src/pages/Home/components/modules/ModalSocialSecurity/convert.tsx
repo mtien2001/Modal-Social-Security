@@ -1,7 +1,12 @@
 import { getLabels } from "./ultis";
-import { IModalSocialSecurityResponse } from "../../../../../repositories/shirason_repository/types";
+import {
+  IModalSocialSecurityResponse,
+  IModalSocialSecurityValue
+} from "./types";
 
-export const convertData = (data: IModalSocialSecurityResponse) => {
+export const convertData = (
+  data: IModalSocialSecurityValue
+): IModalSocialSecurityResponse => {
   return {
     whenHeDied: {
       isDisable: data.data.whenHeDied.isDisable,

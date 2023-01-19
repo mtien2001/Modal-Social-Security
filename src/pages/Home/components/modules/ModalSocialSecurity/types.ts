@@ -18,3 +18,11 @@ export interface IModalSocialSecurityValue {
     whenChildBorn: IModalData;
   };
 }
+
+export interface IModalSocialSecurityResponse {
+  whenHeDied: IModalData;
+  whenMedicalExpensesBecomeHigh: IModalData;
+  whenYouCanNotWork: IModalData;
+  whenInTrouble: IModalData;
+  whenChildBorn: IModalData;
+}
