@@ -1,7 +1,13 @@
+interface INotWarrantyProps {
+  isDisable: true;
+}
+
+interface IWarrantyProps {
+  isDisable: false;
+  budgets: string[];
+  money: string;
+}
+
 export interface ITabWhenYouCanNotWorkProps {
-  data: {
-    isDisable: boolean;
-    budget: string[] | undefined;
-    money: number | undefined;
-  };
+  data: IWarrantyProps | INotWarrantyProps;
 }

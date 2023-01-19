@@ -1,48 +1,30 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { ITabWhenYouCanNotWorkProps } from "./types";
-import { Flex, Box, Text } from "./styled";
 import { NotWarranty } from "../NotWarranty";
 import { images } from "../../../assets/images";
 import { Warranty } from "../Warranty";
 
-export const WhenYouCanNotWork: React.FC<ITabWhenYouCanNotWorkProps> = (
-  props
-): JSX.Element => {
-  const { data } = props;
+const image = images.whenYouCanNotWorkIcon;
+const title = "働けなくなった時";
 
-  const renderAmountYouReceive = useMemo(
-    () => {
-      if (data.isDisable) {
-        return <NotWarranty />;
-      }
-      return (
-        <Warranty
-          budget={data.budget}
-          money={data.money}
-          text={"ひと月あたり"}
-        />
-      );
-    },
-    [data]
-  );
+export const WhenYouCanNotWork = (
+  props: ITabWhenYouCanNotWorkProps
+): JSX.Element => {
+  const { isDisable } = props.data;
+
+  if (isDisable) {
+    return <NotWarranty image={image} title={title} />;
+  }
+
+  const { budgets, money } = props.data;
 
   return (
-    <Flex>
-      <Box>
-        <img src={images.whenYouCanNotWorkIcon} width={"48px"} alt={""} />
-        <Text
-          fontFamily={"Zen Maru Gothic"}
-          fontWeight={"500"}
-          fontSize={"20px"}
-          lineHeight={"26px"}
-          color={"#262e2c"}
-          whiteSpace={"pre-line"}
-          marginLeft={"12px"}
-        >
-          働けなくなった時
-        </Text>
-      </Box>
-      {renderAmountYouReceive}
-    </Flex>
+    <Warranty
+      textDesc={"ひと月あたり"}
+      budgets={budgets}
+      money={money}
+      title={title}
+      image={image}
+    />
   );
 };

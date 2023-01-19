@@ -1,10 +1,15 @@
-export interface IModalData {
-  isDisable: boolean;
-  budget: string[] | undefined;
-  money: number | undefined;
+export interface IModalSecurityProps {
+  isOpen: boolean;
+  toggleModal: () => void;
 }
 
-export interface ITabDiagnosisProps {
+export interface IModalData {
+  isDisable: boolean;
+  budgets: string[] | undefined;
+  money: string | undefined;
+}
+
+export interface IModalSocialSecurityValue {
   data: {
     whenHeDied: IModalData;
     whenMedicalExpensesBecomeHigh: IModalData;

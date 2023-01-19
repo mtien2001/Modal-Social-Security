@@ -1,6 +1,8 @@
 export interface IBoxActiveProps {
-  budget?: string[];
-  money?: number | undefined;
-  text: string;
+  budgets: string[];
+  money: string;
+  image: string;
+  title: string;
   textDesc?: string;
+  textDescMoney?: string;
 }

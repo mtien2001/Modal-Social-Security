@@ -2,8 +2,8 @@ export interface IModalSocialSecurityParams {}
 
 export interface IModalData {
   isDisable: boolean;
-  budget: string[] | undefined;
-  money: number | undefined;
+  budgets: string[] | undefined;
+  money: string | undefined;
 }
 
 export interface IModalSocialSecurityResponse {

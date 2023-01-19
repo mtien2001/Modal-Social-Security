@@ -1,7 +1,13 @@
-export interface ITabWhenMedicalExpensesBecomeHighProps {
-  data: {
-    isDisable: boolean;
-    budget: string[] | undefined;
-    money: number | undefined;
-  };
+interface INotWarrantyProps {
+  isDisable: true;
+}
+
+interface IWarrantyProps {
+  isDisable: false;
+  budgets: string[];
+  money: string;
+}
+
+export interface IWhenMedicalExpensesBecomeHighProps {
+  data: IWarrantyProps | INotWarrantyProps;
 }

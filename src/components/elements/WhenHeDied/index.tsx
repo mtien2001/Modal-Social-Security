@@ -1,48 +1,27 @@
-import React, { useMemo } from "react";
-import { ITabWhenHeDiedProps } from "./types";
-import { Flex, Box, Text } from "./styled";
+import React from "react";
+import { IWhenHeDiedProps } from "./types";
 import { NotWarranty } from "../NotWarranty";
 import { images } from "../../../assets/images";
 import { Warranty } from "../Warranty";
 
-export const WhenHeDied: React.FC<ITabWhenHeDiedProps> = (
-  props
-): JSX.Element => {
-  const { data } = props;
+const image = images.whenHeDiedIcon;
+const title = "亡くなった時";
 
-  const renderAmountYouReceive = useMemo(
-    () => {
-      if (data.isDisable) {
-        return <NotWarranty />;
-      }
-      return (
-        <Warranty
-          budget={data.budget}
-          money={data.money}
-          text={"ひと月あたり自己負担上限額"}
-        />
-      );
-    },
-    [data]
-  );
+export const WhenHeDied = (props: IWhenHeDiedProps): JSX.Element => {
+  const { isDisable } = props.data;
+  if (isDisable) {
+    return <NotWarranty image={image} title={title} />;
+  }
+
+  const { budgets, money } = props.data;
 
   return (
-    <Flex>
-      <Box>
-        <img src={images.whenHeDiedIcon} width={"48px"} alt={""} />
-        <Text
-          fontFamily={"Zen Maru Gothic"}
-          fontWeight={"500"}
-          fontSize={"20px"}
-          lineHeight={"26px"}
-          color={"#262e2c"}
-          whiteSpace={"pre-line"}
-          marginLeft={"12px"}
-        >
-          亡くなった時
-        </Text>
-      </Box>
-      {renderAmountYouReceive}
-    </Flex>
+    <Warranty
+      textDesc={"ひと月あたり"}
+      image={image}
+      title={title}
+      budgets={budgets}
+      money={money}
+    />
   );
 };

@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { modalSocialSecurityRepository } from "../../repositories";
+import { modalSocialSecurityRepository } from "../../../../../repositories";
 import { convertData } from "./convert";
+import { IModalSecurityProps } from "./types";
 
-export const useModalSocialSecurity = () => {
+export const useModalSocialSecurity = (props: IModalSecurityProps) => {
+  const { isOpen, toggleModal } = props;
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState<any>(undefined);
 
@@ -24,6 +26,8 @@ export const useModalSocialSecurity = () => {
 
   return {
     data,
-    isLoading
+    isLoading,
+    isOpen,
+    toggleModal
   };
 };

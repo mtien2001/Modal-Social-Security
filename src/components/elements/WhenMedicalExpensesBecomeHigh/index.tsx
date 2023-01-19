@@ -1,54 +1,29 @@
-import React, { useMemo } from "react";
-import { ITabWhenMedicalExpensesBecomeHighProps } from "./types";
-import { Flex, Box, Text } from "./styled";
+import React from "react";
+import { IWhenMedicalExpensesBecomeHighProps } from "./types";
 import { NotWarranty } from "../NotWarranty";
 import { images } from "../../../assets/images";
 import { Warranty } from "../Warranty";
 
-export const WhenMedicalExpensesBecomeHigh: React.FC<
-  ITabWhenMedicalExpensesBecomeHighProps
-> = (props): JSX.Element => {
-  const { data } = props;
+const title = "病気やケガで\n医療費が高額になった時";
+const image = images.whenMedicalExpensesBecomeHighIcon;
 
-  const renderAmountYouReceive = useMemo(
-    () => {
-      if (data.isDisable) {
-        return <NotWarranty />;
-      }
-      return (
-        <Warranty
-          budget={data.budget}
-          money={data.money}
-          text={"ひと月あたり"}
-        />
-      );
-    },
-    [data]
-  );
+export const WhenMedicalExpensesBecomeHigh = (
+  props: IWhenMedicalExpensesBecomeHighProps
+): JSX.Element => {
+  const { isDisable } = props.data;
 
+  if (isDisable) {
+    return <NotWarranty image={image} title={title} />;
+  }
+
+  const { budgets, money } = props.data;
   return (
-    <Flex>
-      <Box>
-        <img
-          src={images.whenMedicalExpensesBecomeHighIcon}
-          width={"48px"}
-          alt={""}
-        />
-        <Text
-          fontFamily={"Zen Maru Gothic"}
-          fontWeight={"500"}
-          fontSize={"20px"}
-          lineHeight={"26px"}
-          color={"#262e2c"}
-          whiteSpace={"pre-line"}
-          marginLeft={"12px"}
-        >
-          病気やケガで
-          <br />
-          医療費が高額になった時
-        </Text>
-      </Box>
-      {renderAmountYouReceive}
-    </Flex>
+    <Warranty
+      textDesc={"ひと月あたり自己負担上限額"}
+      budgets={budgets}
+      money={money}
+      title={title}
+      image={image}
+    />
   );
 };

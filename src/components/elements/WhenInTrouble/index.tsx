@@ -1,48 +1,27 @@
-import React, { useMemo } from "react";
-import { ITabWhenInTroubleProps } from "./types";
-import { Flex, Box, Text } from "./styled";
+import React from "react";
+import { IWhenInTroubleProps } from "./types";
 import { NotWarranty } from "../NotWarranty";
 import { images } from "../../../assets/images";
 import { Warranty } from "../Warranty";
 
-export const WhenInTrouble: React.FC<ITabWhenInTroubleProps> = (
-  props
-): JSX.Element => {
-  const { data } = props;
+const image = images.whenInTroubleIcon;
+const title = "障害状態になった時";
 
-  const renderAmountYouReceive = useMemo(
-    () => {
-      if (data.isDisable) {
-        return <NotWarranty />;
-      }
-      return (
-        <Warranty
-          budget={data.budget}
-          money={data.money}
-          text={"障害等級2級の場合、ひと月あたり"}
-        />
-      );
-    },
-    [data]
-  );
+export const WhenInTrouble = (props: IWhenInTroubleProps): JSX.Element => {
+  const { isDisable } = props.data;
+
+  if (isDisable) {
+    return <NotWarranty image={image} title={title} />;
+  }
+  const { budgets, money } = props.data;
 
   return (
-    <Flex>
-      <Box>
-        <img src={images.whenYouCanNotWorkIcon} width={"48px"} alt={""} />
-        <Text
-          fontFamily={"Zen Maru Gothic"}
-          fontWeight={"500"}
-          fontSize={"20px"}
-          lineHeight={"26px"}
-          color={"#262e2c"}
-          whiteSpace={"pre-line"}
-          marginLeft={"12px"}
-        >
-          障害状態になった時
-        </Text>
-      </Box>
-      {renderAmountYouReceive}
-    </Flex>
+    <Warranty
+      textDesc={"障害等級2級の場合、ひと月あたり"}
+      image={image}
+      title={title}
+      budgets={budgets}
+      money={money}
+    />
   );
 };

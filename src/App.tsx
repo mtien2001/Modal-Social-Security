@@ -1,10 +1,10 @@
 import React from "react";
-import { ModalSocialSecurityDiagnosis } from "./pages/ModalSocialSecurity";
 import { ModalProvider } from "styled-react-modal";
 import { ThemeProvider } from "@emotion/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "./theme";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Home } from "./pages/Home";
 
 function App() {
   const queryClient = new QueryClient({
@@ -22,7 +22,7 @@ function App() {
       <ModalProvider>
         <ThemeProvider theme={theme}>
           <ChakraProvider resetCSS theme={theme}>
-            <ModalSocialSecurityDiagnosis />
+            <Home />
           </ChakraProvider>
         </ThemeProvider>
       </ModalProvider>
