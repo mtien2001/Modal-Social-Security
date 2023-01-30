@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Text, FlexBox, BoxLeft } from "./styled";
+import { Box, Flex, Text, FlexBox, Left } from "./styled";
 import { images } from "../../../assets/images";
 import { INotWarrantyProps } from "./types";
 
@@ -8,7 +8,7 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
 
   return (
     <FlexBox>
-      <BoxLeft>
+      <Left>
         <img src={image} width={"48px"} alt={""} />
         <Text
           fontFamily={"Zen Maru Gothic"}
@@ -21,7 +21,7 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
         >
           {title}
         </Text>
-      </BoxLeft>
+      </Left>
       <Box>
         <Flex>
           <img width={"20px"} src={images.exclamationMarkIcon} alt={""} />

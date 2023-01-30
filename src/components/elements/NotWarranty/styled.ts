@@ -47,7 +47,7 @@ export const FlexBox = styled.div`
   }
 `;
 
-export const BoxLeft = styled.div`
+export const Left = styled.div`
   display: flex;
   align-items: center;
   background-color: #edf9f5;

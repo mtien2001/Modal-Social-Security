@@ -1,12 +1,12 @@
 import React from "react";
-import {BoxBudget, Box, Budget, Button, Label, Text, Flex, BoxLeft} from "./styled";
+import {BoxBudget, Box, Budget, Button, Label, Text, Flex, Left} from "./styled";
 import { IBoxActiveProps } from "./types";
 
 export const Warranty = (props: IBoxActiveProps): JSX.Element => {
   const { budgets, money, title, image, textDesc, textDescMoney } = props;
   return (
     <Flex>
-        <BoxLeft>
+        <Left>
             <img src={image} width={"48px"} alt={""} />
             <Text
                 fontFamily={"Zen Maru Gothic"}
@@ -19,7 +19,7 @@ export const Warranty = (props: IBoxActiveProps): JSX.Element => {
             >
                 {title}
             </Text>
-        </BoxLeft>
+        </Left>
         <Box>
             <BoxBudget>
                 {budgets?.map((item, index) => <Budget key={index}>{item}</Budget>)}
