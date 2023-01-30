@@ -25,6 +25,7 @@ export const ModalHeader = styled.div`
   gap: 20px;
   padding-left: 24px;
   padding-right: 24px;
+  min-height: 100px;
 `;
 
 export const ModalBody = styled.div`

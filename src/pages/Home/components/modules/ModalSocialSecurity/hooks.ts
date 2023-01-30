@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import { modalSocialSecurityRepository } from "../../../../../repositories";
+import { socialSecurityRepository } from "../../../../../repositories";
 import { convertData } from "./convert";
-import { IModalSecurityProps } from "./types";
+import { IModalSecurityProps, ISocialSecurityValue } from "./types";
 
 export const useModalSocialSecurity = (props: IModalSecurityProps) => {
-  const { isOpen, toggleModal } = props;
+  const { isOpen, onClose } = props;
   const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState<any>(undefined);
+  const [data, setData] = useState<ISocialSecurityValue | undefined>(undefined);
 
   const fetchModalSocialSecurity = async () => {
     setIsLoading(true);
     try {
-      const response = await modalSocialSecurityRepository.getModalSocialSecurityResult(
+      const response = await socialSecurityRepository.getSocialSecurityResult(
         {}
       );
       setData(convertData(response));
@@ -28,6 +28,6 @@ export const useModalSocialSecurity = (props: IModalSecurityProps) => {
     data,
     isLoading,
     isOpen,
-    toggleModal
+    onClose
   };
 };

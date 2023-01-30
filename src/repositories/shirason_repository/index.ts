@@ -1,13 +1,10 @@
 import { dataMock } from "./contants";
-import {
-  IModalSocialSecurityParams,
-  IModalSocialSecurityResponse
-} from "./types";
+import { ISocialSecurityParams, ISocialSecurityResponse } from "./types";
 
-export class ModalSocialSecurityRepository {
-  async getModalSocialSecurityResult(
-    _params: IModalSocialSecurityParams
-  ): Promise<IModalSocialSecurityResponse> {
+export class SocialSecurityRepository {
+  async getSocialSecurityResult(
+    _params: ISocialSecurityParams
+  ): Promise<ISocialSecurityResponse> {
     return new Promise(resolve => {
       resolve(dataMock);
     });

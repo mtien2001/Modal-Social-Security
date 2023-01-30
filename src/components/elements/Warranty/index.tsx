@@ -3,7 +3,7 @@ import {BoxBudget, Box, Budget, Button, Label, Text, Flex, Left} from "./styled"
 import { IBoxActiveProps } from "./types";
 
 export const Warranty = (props: IBoxActiveProps): JSX.Element => {
-  const { budgets, money, title, image, textDesc, textDescMoney } = props;
+  const { labels, money, title, image, textDesc, textDescMoney } = props;
   return (
     <Flex>
         <Left>
@@ -22,7 +22,7 @@ export const Warranty = (props: IBoxActiveProps): JSX.Element => {
         </Left>
         <Box>
             <BoxBudget>
-                {budgets?.map((item, index) => <Budget key={index}>{item}</Budget>)}
+                {labels?.map((item, index) => <Budget key={index}>{item}</Budget>)}
             </BoxBudget>
             <Label>
                 <Text

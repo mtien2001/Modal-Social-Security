@@ -1,5 +1,5 @@
 export interface IBoxActiveProps {
-  budgets: string[];
+  labels: string[];
   money: string;
   image: string;
   title: string;

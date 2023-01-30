@@ -4,14 +4,14 @@ import { ModalSocialSecurityDiagnosis } from "./components/modules/ModalSocialSe
 export const Home = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const toggleModal = () => {
+  const onClose = () => {
     setIsOpen(!isOpen);
   };
 
   return (
     <div>
-      <button onClick={() => toggleModal()}>Click !</button>
-      <ModalSocialSecurityDiagnosis isOpen={isOpen} toggleModal={toggleModal} />
+      <button onClick={() => onClose()}>Click !</button>
+      <ModalSocialSecurityDiagnosis isOpen={isOpen} onClose={onClose} />
     </div>
   );
 };

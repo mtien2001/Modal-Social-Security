@@ -1,6 +1,8 @@
-export const getLabels = (data: string[] | undefined) => {
+export const getLabels = (
+  data: string[] | undefined | (string | undefined)[]
+) => {
   if (data) {
-    const labels = data.map((item: string) => {
+    const labels = data.map((item: string | undefined) => {
       if (item === "survivors_basic_pension") return "遺族基礎年金";
       if (item === "survivors_welfare_pension") return "遺族厚生年金";
       if (item === "high_medical_expenses_system") return "高額療養費制度";

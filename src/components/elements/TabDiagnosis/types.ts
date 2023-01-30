@@ -4,7 +4,7 @@ interface INotWarrantyProps {
 
 interface IWarrantyProps {
   isDisable: false;
-  budgets: string[];
+  labels: string[];
   money: string;
 }
 

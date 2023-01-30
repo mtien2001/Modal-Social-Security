@@ -1,15 +1,23 @@
 export interface IModalSecurityProps {
   isOpen: boolean;
-  toggleModal: () => void;
+  onClose: () => void;
 }
 
 export interface IModalData {
   isDisable: boolean;
-  budgets: string[] | undefined;
-  money: string | undefined;
+  labels?: string[] | (string | undefined)[];
+  money?: string;
 }
 
-export interface IModalSocialSecurityValue {
+export interface ISocialSecurityValue {
+  whenHeDied: IModalData;
+  whenMedicalExpensesBecomeHigh: IModalData;
+  whenYouCanNotWork: IModalData;
+  whenInTrouble: IModalData;
+  whenChildBorn: IModalData;
+}
+
+export interface ISocialSecurityResponse {
   data: {
     whenHeDied: IModalData;
     whenMedicalExpensesBecomeHigh: IModalData;
@@ -17,12 +25,4 @@ export interface IModalSocialSecurityValue {
     whenInTrouble: IModalData;
     whenChildBorn: IModalData;
   };
-}
-
-export interface IModalSocialSecurityResponse {
-  whenHeDied: IModalData;
-  whenMedicalExpensesBecomeHigh: IModalData;
-  whenYouCanNotWork: IModalData;
-  whenInTrouble: IModalData;
-  whenChildBorn: IModalData;
 }

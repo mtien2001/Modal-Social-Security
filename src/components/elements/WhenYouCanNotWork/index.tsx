@@ -16,12 +16,12 @@ export const WhenYouCanNotWork = (
     return <NotWarranty image={image} title={title} />;
   }
 
-  const { budgets, money } = props.data;
+  const { labels, money } = props.data;
 
   return (
     <Warranty
       textDesc={"ひと月あたり"}
-      budgets={budgets}
+      labels={labels}
       money={money}
       title={title}
       image={image}

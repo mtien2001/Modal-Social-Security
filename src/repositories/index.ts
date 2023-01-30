@@ -1,3 +1,3 @@
-import { ModalSocialSecurityRepository } from "./shirason_repository";
+import { SocialSecurityRepository } from "./shirason_repository";
 
-export const modalSocialSecurityRepository = new ModalSocialSecurityRepository();
+export const socialSecurityRepository = new SocialSecurityRepository();

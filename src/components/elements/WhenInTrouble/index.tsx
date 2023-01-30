@@ -13,14 +13,14 @@ export const WhenInTrouble = (props: IWhenInTroubleProps): JSX.Element => {
   if (isDisable) {
     return <NotWarranty image={image} title={title} />;
   }
-  const { budgets, money } = props.data;
+  const { labels, money } = props.data;
 
   return (
     <Warranty
       textDesc={"障害等級2級の場合、ひと月あたり"}
       image={image}
       title={title}
-      budgets={budgets}
+      labels={labels}
       money={money}
     />
   );

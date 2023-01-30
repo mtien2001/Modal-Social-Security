@@ -13,14 +13,14 @@ export const WhenChildBorn = (props: IWhenChildBornProps): JSX.Element => {
   if (isDisable) {
     return <NotWarranty image={image} title={title} />;
   }
-  const { budgets, money } = props.data;
+  const { labels, money } = props.data;
 
   return (
     <Warranty
       textDesc={"すべての合計で"}
       image={image}
       title={title}
-      budgets={budgets}
+      labels={labels}
       money={money}
       textDescMoney={"最大"}
     />

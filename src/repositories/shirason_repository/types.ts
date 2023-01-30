@@ -1,12 +1,12 @@
-export interface IModalSocialSecurityParams {}
+export interface ISocialSecurityParams {}
 
 export interface IModalData {
   isDisable: boolean;
-  budgets: string[] | undefined;
-  money: string | undefined;
+  labels?: string[];
+  money?: string;
 }
 
-export interface IModalSocialSecurityResponse {
+export interface ISocialSecurityResponse {
   data: {
     whenHeDied: IModalData;
     whenMedicalExpensesBecomeHigh: IModalData;

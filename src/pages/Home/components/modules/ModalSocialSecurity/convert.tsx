@@ -1,36 +1,33 @@
 import { getLabels } from "./ultis";
-import {
-  IModalSocialSecurityResponse,
-  IModalSocialSecurityValue
-} from "./types";
+import { ISocialSecurityResponse, ISocialSecurityValue } from "./types";
 
 export const convertData = (
-  data: IModalSocialSecurityValue
-): IModalSocialSecurityResponse => {
+  data: ISocialSecurityResponse
+): ISocialSecurityValue => {
   return {
     whenHeDied: {
       isDisable: data.data.whenHeDied.isDisable,
-      budgets: getLabels(data.data.whenHeDied.budgets),
+      labels: getLabels(data.data.whenHeDied.labels),
       money: data.data.whenHeDied.money
     },
     whenMedicalExpensesBecomeHigh: {
       isDisable: data.data.whenMedicalExpensesBecomeHigh.isDisable,
-      budgets: getLabels(data.data.whenMedicalExpensesBecomeHigh.budgets),
+      labels: getLabels(data.data.whenMedicalExpensesBecomeHigh.labels),
       money: data.data.whenMedicalExpensesBecomeHigh.money
     },
     whenYouCanNotWork: {
       isDisable: data.data.whenYouCanNotWork.isDisable,
-      budgets: getLabels(data.data.whenYouCanNotWork.budgets),
+      labels: getLabels(data.data.whenYouCanNotWork.labels),
       money: data.data.whenYouCanNotWork.money
     },
     whenInTrouble: {
       isDisable: data.data.whenInTrouble.isDisable,
-      budgets: getLabels(data.data.whenInTrouble.budgets),
+      labels: getLabels(data.data.whenInTrouble.labels),
       money: data.data.whenInTrouble.money
     },
     whenChildBorn: {
       isDisable: data.data.whenChildBorn.isDisable,
-      budgets: getLabels(data.data.whenChildBorn.budgets),
+      labels: getLabels(data.data.whenChildBorn.labels),
       money: data.data.whenChildBorn.money
     }
   };

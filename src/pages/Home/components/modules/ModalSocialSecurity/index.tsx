@@ -14,13 +14,13 @@ import { IModalSecurityProps } from "./types";
 const Component = (
   props: ReturnType<typeof useModalSocialSecurity>
 ): JSX.Element => {
-  const { data, isOpen, toggleModal } = props;
+  const { data, isOpen, onClose } = props;
 
   return (
     <Modal
       isOpen={isOpen}
-      onBackgroundClick={toggleModal}
-      onEscapeKeydown={toggleModal}
+      onBackgroundClick={onClose}
+      onEscapeKeydown={onClose}
     >
       <ModalHeader>
         <Img width={"133.17px"} src={images.staffLeft} alt={""} />
