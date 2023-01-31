@@ -1,5 +1,5 @@
 interface IModalSocialSecurityData {
-  isDisabled: false;
+  isDisabled: boolean;
   labels: string[];
   money: string;
 }
