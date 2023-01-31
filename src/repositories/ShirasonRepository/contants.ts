@@ -3,27 +3,27 @@ import { ISocialSecurityResponse } from "./types";
 export const dataMock: ISocialSecurityResponse = {
   data: {
     whenHeDied: {
-      isDisable: true,
+      isDisabled: true,
       labels: undefined,
       money: undefined
     },
     whenMedicalExpensesBecomeHigh: {
-      isDisable: false,
+      isDisabled: false,
       labels: ["high_medical_expenses_system"],
       money: "48"
     },
     whenYouCanNotWork: {
-      isDisable: true,
+      isDisabled: true,
       labels: undefined,
       money: undefined
     },
     whenInTrouble: {
-      isDisable: false,
+      isDisabled: false,
       labels: ["disability_basic_pension", "disability_welfare_pension"],
       money: "30"
     },
     whenChildBorn: {
-      isDisable: false,
+      isDisabled: false,
       labels: [
         "childbirth_and_childcare_lump_sum_grant",
         "maternity_allowance",

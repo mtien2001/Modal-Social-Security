@@ -1,8 +1,8 @@
 export interface ISocialSecurityParams {}
 
 export interface IModalData {
-  isDisable: boolean;
-  labels?: string[];
+  isDisabled: boolean;
+  labels?: string[] | undefined;
   money?: string;
 }
 

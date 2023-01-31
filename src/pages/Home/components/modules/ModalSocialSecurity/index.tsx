@@ -36,7 +36,7 @@ const Component = (
         <Img width={"130px"} src={images.staffRight} alt={""} />
       </ModalHeader>
       <ModalBody>
-        <TabDiagnosis data={data?.data} />
+        <TabDiagnosis data={data} />
       </ModalBody>
     </Modal>
   );

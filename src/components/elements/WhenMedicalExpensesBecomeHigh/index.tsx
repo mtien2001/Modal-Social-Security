@@ -10,9 +10,9 @@ const image = images.whenMedicalExpensesBecomeHighIcon;
 export const WhenMedicalExpensesBecomeHigh = (
   props: IWhenMedicalExpensesBecomeHighProps
 ): JSX.Element => {
-  const { isDisable } = props.data;
+  const { isDisabled } = props.data;
 
-  if (isDisable) {
+  if (isDisabled) {
     return <NotWarranty image={image} title={title} />;
   }
 

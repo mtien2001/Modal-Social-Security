@@ -16,10 +16,10 @@ export const Flex =
   align-items: ${props => props.alignItems};
   flex-direction: row;
   @media (max-width: 768px) {
-    flex-direction: ${props => props.flexDirectionRespon}
+    flex-direction: ${props => props.flexDirectionResponsive}
   };
   @media (max-width: 576px) {
-    justify-content: ${props => props.justifyContentRespon}
+    justify-content: ${props => props.justifyContentResponsive}
   }
 `;
 

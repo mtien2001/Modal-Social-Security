@@ -8,8 +8,8 @@ const image = images.whenHeDiedIcon;
 const title = "亡くなった時";
 
 export const WhenHeDied = (props: IWhenHeDiedProps): JSX.Element => {
-  const { isDisable } = props.data;
-  if (isDisable) {
+  const { isDisabled } = props.data;
+  if (isDisabled) {
     return <NotWarranty image={image} title={title} />;
   }
 

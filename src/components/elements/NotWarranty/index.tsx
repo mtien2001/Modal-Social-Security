@@ -10,7 +10,7 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
     <Flex
       flexDirection={"row"}
       margin={"0 0 12px 0"}
-      flexDirectionRespon={"column"}
+      flexDirectionResponsive={"column"}
       minHeight={"102px"}
     >
       <Left>

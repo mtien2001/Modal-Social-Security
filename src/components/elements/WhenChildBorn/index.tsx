@@ -8,9 +8,9 @@ const image = images.whenChildBornIcon;
 const title = "子どもが生まれる時";
 
 export const WhenChildBorn = (props: IWhenChildBornProps): JSX.Element => {
-  const { isDisable } = props.data;
+  const { isDisabled } = props.data;
 
-  if (isDisable) {
+  if (isDisabled) {
     return <NotWarranty image={image} title={title} />;
   }
   const { labels, money } = props.data;

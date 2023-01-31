@@ -1,9 +1,9 @@
 interface INotWarrantyProps {
-  isDisable: true;
+  isDisabled: true;
 }
 
 interface IWarrantyProps {
-  isDisable: false;
+  isDisabled: false;
   labels?: string[] | (string | undefined)[];
   money?: string;
 }

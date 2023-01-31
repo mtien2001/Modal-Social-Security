@@ -8,9 +8,9 @@ const image = images.whenInTroubleIcon;
 const title = "障害状態になった時";
 
 export const WhenInTrouble = (props: IWhenInTroubleProps): JSX.Element => {
-  const { isDisable } = props.data;
+  const { isDisabled } = props.data;
 
-  if (isDisable) {
+  if (isDisabled) {
     return <NotWarranty image={image} title={title} />;
   }
   const { labels, money } = props.data;

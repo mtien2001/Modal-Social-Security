@@ -30,7 +30,7 @@ export const Flex =
   padding: ${props => props.padding};
   min-height: ${props => props.minHeight};
   @media (max-width: 768px) {
-    flex-direction: ${props => props.flexDirectionRespon}
+    flex-direction: ${props => props.flexDirectionResponsive}
   }
 `;
 

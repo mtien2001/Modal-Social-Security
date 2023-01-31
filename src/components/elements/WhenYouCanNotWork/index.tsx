@@ -10,9 +10,9 @@ const title = "働けなくなった時";
 export const WhenYouCanNotWork = (
   props: ITabWhenYouCanNotWorkProps
 ): JSX.Element => {
-  const { isDisable } = props.data;
+  const { isDisabled } = props.data;
 
-  if (isDisable) {
+  if (isDisabled) {
     return <NotWarranty image={image} title={title} />;
   }
 

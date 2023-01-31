@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { ModalSocialSecurityDiagnosis } from "./components/modules/ModalSocialSecurity";
+import { useDisclosure } from "./hooks";
 
 export const Home = (): JSX.Element => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  const onClose = () => {
-    setIsOpen(!isOpen);
-  };
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <div>
-      <button onClick={() => onClose()}>Click !</button>
-      <ModalSocialSecurityDiagnosis isOpen={isOpen} onClose={onClose} />
+      <button onClick={() => onOpen()}>Click !</button>
+      <ModalSocialSecurityDiagnosis
+        onOpen={onOpen}
+        isOpen={isOpen}
+        onClose={onClose}
+      />
     </div>
   );
 };

@@ -1,36 +1,42 @@
-import { getLabels } from "./ultis";
-import { ISocialSecurityResponse, ITabDiagnosisValue } from "./types";
-
+import {
+  getLabelsWhenChildBorn,
+  getLabelsWhenHeDied,
+  getLabelsWhenInTrouble,
+  getLabelsWhenMedicalExpensesBecomeHigh,
+  getLabelsWhenYouCanNotWork
+} from "./ultis";
+import { ISocialSecurityResponse } from "../../../../../repositories/ShirasonRepository/types";
+import { ISocialSecurityData } from "./types";
 export const convertData = (
   data: ISocialSecurityResponse
-): ITabDiagnosisValue => {
+): ISocialSecurityData => {
   return {
-    data: {
-      whenHeDied: {
-        isDisable: data.data.whenHeDied.isDisable,
-        labels: getLabels(data.data.whenHeDied.labels),
-        money: data.data.whenHeDied.money
-      },
-      whenMedicalExpensesBecomeHigh: {
-        isDisable: data.data.whenMedicalExpensesBecomeHigh.isDisable,
-        labels: getLabels(data.data.whenMedicalExpensesBecomeHigh.labels),
-        money: data.data.whenMedicalExpensesBecomeHigh.money
-      },
-      whenYouCanNotWork: {
-        isDisable: data.data.whenYouCanNotWork.isDisable,
-        labels: getLabels(data.data.whenYouCanNotWork.labels),
-        money: data.data.whenYouCanNotWork.money
-      },
-      whenInTrouble: {
-        isDisable: data.data.whenInTrouble.isDisable,
-        labels: getLabels(data.data.whenInTrouble.labels),
-        money: data.data.whenInTrouble.money
-      },
-      whenChildBorn: {
-        isDisable: data.data.whenChildBorn.isDisable,
-        labels: getLabels(data.data.whenChildBorn.labels),
-        money: data.data.whenChildBorn.money
-      }
+    whenHeDied: {
+      isDisabled: data.data.whenHeDied.isDisabled,
+      labels: getLabelsWhenHeDied(data.data.whenHeDied.labels),
+      money: data.data.whenHeDied.money
+    },
+    whenMedicalExpensesBecomeHigh: {
+      isDisabled: data.data.whenMedicalExpensesBecomeHigh.isDisabled,
+      labels: getLabelsWhenMedicalExpensesBecomeHigh(
+        data.data.whenMedicalExpensesBecomeHigh.labels
+      ),
+      money: data.data.whenMedicalExpensesBecomeHigh.money
+    },
+    whenYouCanNotWork: {
+      isDisabled: data.data.whenYouCanNotWork.isDisabled,
+      labels: getLabelsWhenYouCanNotWork(data.data.whenYouCanNotWork.labels),
+      money: data.data.whenYouCanNotWork.money
+    },
+    whenInTrouble: {
+      isDisabled: data.data.whenInTrouble.isDisabled,
+      labels: getLabelsWhenInTrouble(data.data.whenInTrouble.labels),
+      money: data.data.whenInTrouble.money
+    },
+    whenChildBorn: {
+      isDisabled: data.data.whenChildBorn.isDisabled,
+      labels: getLabelsWhenChildBorn(data.data.whenChildBorn.labels),
+      money: data.data.whenChildBorn.money
     }
   };
 };

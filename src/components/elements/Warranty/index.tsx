@@ -8,7 +8,7 @@ export const Warranty = (props: IBoxActiveProps): JSX.Element => {
     <Flex
       margin={"0 0 12px 0"}
       width={"100%"}
-      flexDirectionRespon={"column"}
+      flexDirectionResponsive={"column"}
       minHeight={"102px"}
     >
       <Left>
@@ -25,14 +25,17 @@ export const Warranty = (props: IBoxActiveProps): JSX.Element => {
           {title}
         </Text>
       </Left>
+
       <Right>
         <Flex gap={"8px"} padding={"16px 16px 10px 16px"} flexWrap={"wrap"}>
           {labels.map((item, index) => <Budget key={index}>{item}</Budget>)}
         </Flex>
         <Flex
           alignItems={"baseline"}
-          padding={"0 16px 0 16px"}
-          justifyContentRespon={"space-between"}
+          padding={"0 16px 16px 16px"}
+          justifyContent={"flex-end"}
+          justifyContentResponsive={"center"}
+          flexDirectionResponsive={"flex-end"}
         >
           <Text
             fontFamily={"Hiragino Sans"}
