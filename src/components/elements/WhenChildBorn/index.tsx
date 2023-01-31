@@ -3,9 +3,6 @@ import { IWhenChildBornProps } from "./types";
 import { images } from "../../../assets/images";
 import { Card } from "../Warranty";
 
-const image = images.whenChildBornIcon;
-const title = "子どもが生まれる時";
-
 export const WhenChildBorn = (props: IWhenChildBornProps): JSX.Element => {
   const { labels, money, isDisabled } = props.data;
 
@@ -13,8 +10,8 @@ export const WhenChildBorn = (props: IWhenChildBornProps): JSX.Element => {
     <Card
       isDisabled={isDisabled}
       textDesc={"すべての合計で"}
-      image={image}
-      title={title}
+      image={images.whenChildBornIcon}
+      title={"子どもが生まれる時"}
       labels={labels}
       textMoney={money}
       textDescMoney={"最大"}
