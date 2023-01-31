@@ -1,7 +1,7 @@
 import React from "react";
 import { IWhenChildBornProps } from "./types";
 import { images } from "../../../assets/images";
-import { Card } from "../Warranty";
+import { Card } from "../Card";
 
 export const WhenChildBorn = (props: IWhenChildBornProps): JSX.Element => {
   const { labels, money, isDisabled } = props.data;

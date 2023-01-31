@@ -1,7 +1,7 @@
 import React from "react";
 import { ITabWhenYouCanNotWorkProps } from "./types";
 import { images } from "../../../assets/images";
-import { Card } from "../Warranty";
+import { Card } from "../Card";
 
 export const WhenYouCanNotWork = (
   props: ITabWhenYouCanNotWorkProps

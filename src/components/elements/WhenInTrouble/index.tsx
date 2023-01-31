@@ -1,7 +1,7 @@
 import React from "react";
 import { IWhenInTroubleProps } from "./types";
 import { images } from "../../../assets/images";
-import { Card } from "../Warranty";
+import { Card } from "../Card";
 
 export const WhenInTrouble = (props: IWhenInTroubleProps): JSX.Element => {
   const { labels, money, isDisabled } = props.data;
