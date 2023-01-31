@@ -1,11 +1,38 @@
 import styled from "@emotion/styled";
 
-export const BoxBudget = styled.div`
+export const Flex =
+  styled.div <
+  any >
+  `
   display: flex;
-  gap: 8px;
-  padding: 16px 16px 10px 16px;
-  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  gap: ${props => props.gap};
+  min-height: ${props => props.minHeight};
+  flex-wrap: ${props => props.flexWrap};
+  margin: ${props => props.margin};
+  padding: ${props => props.padding};
+  justify-content: ${props => props.justifyContent};
+  align-items: ${props => props.alignItems};
+  flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: ${props => props.flexDirectionRespon}
+  };
+  @media (max-width: 576px) {
+    justify-content: ${props => props.justifyContentRespon}
+  }
 `;
+
+export const Button = styled.p<any>(
+  {
+    lineHeight: "100%",
+    margin: "0px",
+    padding: "0px"
+  },
+  props => ({
+    ...props
+  })
+);
 
 export const Budget = styled.div`
   display: flex;
@@ -22,7 +49,7 @@ export const Budget = styled.div`
   line-height: 100%;
 `;
 
-export const Box = styled.div`
+export const Right = styled.div`
   align-items: center;
   background-color: #ffffff;
   max-width: 492px;
@@ -39,30 +66,6 @@ export const Box = styled.div`
   border-bottom-right-radius: 12px;
 `;
 
-export const Button = styled.p<any>(
-  {
-    lineHeight: "100%",
-    margin: "0px",
-    padding: "0px"
-  },
-  props => ({
-    ...props
-  })
-);
-
-export const Label = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-bottom: 16px;
-  align-items: baseline;
-  padding-right: 16px;
-  padding-left: 16px;
-  @media (max-width: 576px) {
-    justify-content: space-between;
-  }
-`;
-
 export const Text = styled.p<any>(
   {
     lineHeight: "100%",
@@ -73,17 +76,6 @@ export const Text = styled.p<any>(
     ...props
   })
 );
-
-export const Flex = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin-bottom: 12px;
-  min-height: 102px;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-`;
 
 export const Left = styled.div`
   display: flex;

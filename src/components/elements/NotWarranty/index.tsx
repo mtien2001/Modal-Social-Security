@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Text, FlexBox, Left } from "./styled";
+import { Flex, Text, Left, Right } from "./styled";
 import { images } from "../../../assets/images";
 import { INotWarrantyProps } from "./types";
 
@@ -7,7 +7,12 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
   const { image, title } = props;
 
   return (
-    <FlexBox>
+    <Flex
+      flexDirection={"row"}
+      margin={"0 0 12px 0"}
+      flexDirectionRespon={"column"}
+      minHeight={"102px"}
+    >
       <Left>
         <img src={image} width={"48px"} alt={""} />
         <Text
@@ -22,8 +27,13 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
           {title}
         </Text>
       </Left>
-      <Box>
-        <Flex>
+      <Right>
+        <Flex
+          alignItems={"center"}
+          justifyContent={"start"}
+          height={"fit-content"}
+          padding={"16px 16px 8px 16px"}
+        >
           <img width={"20px"} src={images.exclamationMarkIcon} alt={""} />
           <Text
             fontSize={"16px"}
@@ -48,7 +58,7 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
           ご家族の詳細情報やお住いの市区町村などの条件により、対象になる場合もあります。<br />
           より正確な情報は、日本年金機構や加入している協会けんぽ又は健康保険組合等でご確認下さい。
         </Text>
-      </Box>
-    </FlexBox>
+      </Right>
+    </Flex>
   );
 };

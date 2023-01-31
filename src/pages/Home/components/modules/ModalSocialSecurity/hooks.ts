@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { socialSecurityRepository } from "../../../../../repositories";
 import { convertData } from "./convert";
-import { IModalSecurityProps, ISocialSecurityValue } from "./types";
+import { IModalSecurityProps, ITabDiagnosisValue } from "./types";
 
 export const useModalSocialSecurity = (props: IModalSecurityProps) => {
   const { isOpen, onClose } = props;
   const [isLoading, setIsLoading] = useState(false);
-  const [data, setData] = useState<ISocialSecurityValue | undefined>(undefined);
+  const [data, setData] = useState<ITabDiagnosisValue | undefined>(undefined);
 
   const fetchModalSocialSecurity = async () => {
     setIsLoading(true);

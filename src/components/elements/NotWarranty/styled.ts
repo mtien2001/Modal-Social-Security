@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Box = styled.div`
+export const Right = styled.div`
   background-color: #91b3a9;
   max-width: 492px;
   max-height: 102px;
@@ -16,13 +16,22 @@ export const Box = styled.div`
   }
 `;
 
-export const Flex = styled.div`
+export const Flex =
+  styled.div <
+  any >
+  `
   display: flex;
-  align-items: center;
-  justify-content: start;
-  height: fit-content;
-  padding: 16px;
-  padding-bottom: 8px;
+  width: 100%;
+  flex-direction: ${props => props.flexDirection};
+  align-items: ${props => props.alignItems};
+  justify-content: ${props => props.justifyContent};
+  margin: ${props => props.margin};
+  height: ${props => props.height};
+  padding: ${props => props.padding};
+  min-height: ${props => props.minHeight};
+  @media (max-width: 768px) {
+    flex-direction: ${props => props.flexDirectionRespon}
+  }
 `;
 
 export const Text = styled.p<any>(
@@ -35,17 +44,6 @@ export const Text = styled.p<any>(
     ...props
   })
 );
-
-export const FlexBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin-bottom: 12px;
-  min-height: 102px;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-`;
 
 export const Left = styled.div`
   display: flex;
