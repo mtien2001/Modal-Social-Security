@@ -1,17 +1,24 @@
 import React from "react";
 import { IWhenInTroubleProps } from "./types";
 import { images } from "../../../assets/images";
-import { Card } from "../Card";
+import { NotWarranty, Warranty } from "../Warranty";
+
+const image = images.whenInTroubleIcon;
+const title = "障害状態になった時";
 
 export const WhenInTrouble = (props: IWhenInTroubleProps): JSX.Element => {
-  const { labels, money, isDisabled } = props.data;
+  const { isDisabled } = props.data;
+
+  if (isDisabled) {
+    return <NotWarranty image={image} title={title} />;
+  }
+  const { labels, money } = props.data;
 
   return (
-    <Card
-      isDisabled={isDisabled}
+    <Warranty
       textDesc={"障害等級2級の場合、ひと月あたり"}
-      image={images.whenInTroubleIcon}
-      title={"障害状態になった時"}
+      image={image}
+      title={title}
       labels={labels}
       textMoney={money}
     />

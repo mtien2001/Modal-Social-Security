@@ -1,9 +1,13 @@
-interface IModalSocialSecurityData {
-  isDisabled: boolean;
+interface INotWarrantyProps {
+  isDisabled: true;
+}
+
+interface IWarrantyProps {
+  isDisabled: false;
   labels: string[];
   money: string;
 }
 
 export interface IWhenMedicalExpensesBecomeHighProps {
-  data: IModalSocialSecurityData;
+  data: IWarrantyProps | INotWarrantyProps;
 }

@@ -3,17 +3,19 @@ export interface IModalSecurityProps {
   onOpen: () => void;
   onClose: () => void;
 }
-
+interface INotWarrantyProps {
+  isDisabled: true;
+}
 interface IWarrantyProps {
-  isDisabled: boolean;
+  isDisabled: false;
   labels?: string[] | (string | undefined)[];
   money?: string;
 }
 
 export interface ISocialSecurityData {
-  whenHeDied: IWarrantyProps;
-  whenMedicalExpensesBecomeHigh: IWarrantyProps;
-  whenYouCanNotWork: IWarrantyProps;
-  whenInTrouble: IWarrantyProps;
-  whenChildBorn: IWarrantyProps;
+  whenHeDied: IWarrantyProps | INotWarrantyProps;
+  whenMedicalExpensesBecomeHigh: IWarrantyProps | INotWarrantyProps;
+  whenYouCanNotWork: IWarrantyProps | INotWarrantyProps;
+  whenInTrouble: IWarrantyProps | INotWarrantyProps;
+  whenChildBorn: IWarrantyProps | INotWarrantyProps;
 }

@@ -1,20 +1,28 @@
 import React from "react";
 import { IWhenMedicalExpensesBecomeHighProps } from "./types";
 import { images } from "../../../assets/images";
-import { Card } from "../Card";
+import { NotWarranty, Warranty } from "../Warranty";
+
+const image = images.whenMedicalExpensesBecomeHighIcon;
+const title = "病気やケガで\n医療費が高額になった時";
 
 export const WhenMedicalExpensesBecomeHigh = (
   props: IWhenMedicalExpensesBecomeHighProps
 ): JSX.Element => {
-  const { labels, money, isDisabled } = props.data;
+  const { isDisabled } = props.data;
+
+  if (isDisabled) {
+    return <NotWarranty image={image} title={title} />;
+  }
+  const { labels, money } = props.data;
+
   return (
-    <Card
-      isDisabled={isDisabled}
+    <Warranty
       textDesc={"ひと月あたり自己負担上限額"}
       labels={labels}
       textMoney={money}
-      title={"病気やケガで\n医療費が高額になった時"}
-      image={images.whenMedicalExpensesBecomeHighIcon}
+      title={title}
+      image={image}
     />
   );
 };

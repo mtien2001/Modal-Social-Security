@@ -1,11 +1,10 @@
-export interface ICardProps {
+export interface IWarrantyProps {
   labels: string[];
   textMoney: string;
   image: string;
   title: string;
   textDesc?: string;
   textDescMoney?: string;
-  isDisabled: boolean;
 }
 
 export interface ICardLeftProps {
@@ -13,9 +12,7 @@ export interface ICardLeftProps {
   title: string;
 }
 
-export interface ICardRightProps {
-  labels: string[];
-  textMoney: string;
-  textDesc?: string;
-  textDescMoney?: string;
+export interface INotWarrantyProps {
+  image: string;
+  title: string;
 }

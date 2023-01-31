@@ -6,8 +6,7 @@ import { WhenYouCanNotWork } from "../WhenYouCanNotWork";
 import { WhenInTrouble } from "../WhenInTrouble";
 import { WhenChildBorn } from "../WhenChildBorn";
 
-export const TabDiagnosis = (props: ITabDiagnosisProps | undefined): JSX.Element => {
-  // @ts-ignore
+export const TabDiagnosis = (props: ITabDiagnosisProps): JSX.Element => {
   const {data}  = props;
 
     return (
