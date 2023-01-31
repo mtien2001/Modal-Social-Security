@@ -1,8 +1,7 @@
 import React from "react";
 import { ITabWhenYouCanNotWorkProps } from "./types";
-import { NotWarranty } from "../NotWarranty";
 import { images } from "../../../assets/images";
-import { Warranty } from "../Warranty";
+import { Card } from "../Warranty";
 
 const image = images.whenYouCanNotWorkIcon;
 const title = "働けなくなった時";
@@ -10,19 +9,14 @@ const title = "働けなくなった時";
 export const WhenYouCanNotWork = (
   props: ITabWhenYouCanNotWorkProps
 ): JSX.Element => {
-  const { isDisabled } = props.data;
-
-  if (isDisabled) {
-    return <NotWarranty image={image} title={title} />;
-  }
-
-  const { labels, money } = props.data;
+  const { labels, money, isDisabled } = props.data;
 
   return (
-    <Warranty
+    <Card
+      isDisabled={isDisabled}
       textDesc={"ひと月あたり"}
       labels={labels}
-      money={money}
+      textMoney={money}
       title={title}
       image={image}
     />

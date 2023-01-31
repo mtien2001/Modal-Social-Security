@@ -1,27 +1,19 @@
 import React from "react";
 import { IWhenHeDiedProps } from "./types";
-import { NotWarranty } from "../NotWarranty";
 import { images } from "../../../assets/images";
-import { Warranty } from "../Warranty";
-
-const image = images.whenHeDiedIcon;
-const title = "亡くなった時";
+import { Card } from "../Warranty";
 
 export const WhenHeDied = (props: IWhenHeDiedProps): JSX.Element => {
-  const { isDisabled } = props.data;
-  if (isDisabled) {
-    return <NotWarranty image={image} title={title} />;
-  }
-
-  const { labels, money } = props.data;
+  const { labels, money, isDisabled } = props.data;
 
   return (
-    <Warranty
+    <Card
+      isDisabled={isDisabled}
       textDesc={"ひと月あたり"}
-      image={image}
-      title={title}
+      image={images.whenHeDiedIcon}
+      title={"亡くなった時"}
       labels={labels}
-      money={money}
+      textMoney={money}
     />
   );
 };

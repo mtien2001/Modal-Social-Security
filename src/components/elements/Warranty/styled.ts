@@ -9,6 +9,7 @@ export const Flex =
   width: 100%;
   gap: ${props => props.gap};
   min-height: ${props => props.minHeight};
+  height: ${props => props.height};
   flex-wrap: ${props => props.flexWrap};
   margin: ${props => props.margin};
   padding: ${props => props.padding};
@@ -49,9 +50,12 @@ export const Budget = styled.div`
   line-height: 100%;
 `;
 
-export const Right = styled.div`
+export const Right =
+  styled.div <
+  any >
+  `
   align-items: center;
-  background-color: #ffffff;
+  background-color: ${props => props.backgroundColor};
   max-width: 492px;
   max-height: 102px;
   @media (max-width: 768px) {

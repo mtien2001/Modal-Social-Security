@@ -1,13 +1,9 @@
-interface INotWarrantyProps {
-  isDisabled: true;
-}
-
-interface IWarrantyProps {
+interface IModalSocialSecurityData {
   isDisabled: false;
   labels: string[];
   money: string;
 }
 
 export interface IWhenInTroubleProps {
-  data: IWarrantyProps | INotWarrantyProps;
+  data: IModalSocialSecurityData;
 }
