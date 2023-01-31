@@ -1,3 +1,3 @@
-import { SocialSecurityRepository } from "./shirason_repository";
+import { SocialSecurityRepository } from "./ShirasonRepository";
 
 export const socialSecurityRepository = new SocialSecurityRepository();
