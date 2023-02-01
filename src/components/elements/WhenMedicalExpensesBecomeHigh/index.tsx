@@ -1,7 +1,7 @@
 import React from "react";
 import { IWhenMedicalExpensesBecomeHighProps } from "./types";
 import { images } from "../../../assets/images";
-import { NotWarranty, Warranty } from "../Warranty";
+import { NotWarranty, Warranty } from "../Card";
 
 const image = images.whenMedicalExpensesBecomeHighIcon;
 const title = "病気やケガで\n医療費が高額になった時";

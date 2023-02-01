@@ -1,7 +1,7 @@
 import React from "react";
 import { IWhenInTroubleProps } from "./types";
 import { images } from "../../../assets/images";
-import { NotWarranty, Warranty } from "../Warranty";
+import { NotWarranty, Warranty } from "../Card";
 
 const image = images.whenInTroubleIcon;
 const title = "障害状態になった時";

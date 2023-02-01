@@ -1,7 +1,7 @@
 import React from "react";
 import { ITabWhenYouCanNotWorkProps } from "./types";
 import { images } from "../../../assets/images";
-import { NotWarranty, Warranty } from "../Warranty";
+import { NotWarranty, Warranty } from "../Card";
 
 const image = images.whenYouCanNotWorkIcon;
 const title = "働けなくなった時";

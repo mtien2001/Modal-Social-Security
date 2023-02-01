@@ -1,7 +1,7 @@
 import React from "react";
 import { IWhenHeDiedProps } from "./types";
 import { images } from "../../../assets/images";
-import { NotWarranty, Warranty } from "../Warranty";
+import { NotWarranty, Warranty } from "../Card";
 
 const image = images.whenHeDiedIcon;
 const title = "亡くなった時";
