@@ -66,7 +66,7 @@ const Component = (
         <Img width={"130px"} src={images.staffRight} alt={""} />
       </ModalHeader>
       <ModalBody>
-        {data !== undefined ? <TabDiagnosis data={data} /> : undefined}
+        {data && <TabDiagnosis data={data} />}
       </ModalBody>
     </Modal>
   );

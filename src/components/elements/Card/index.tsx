@@ -7,7 +7,7 @@ const CardLeft = ( props: ICardLeftProps ): JSX.Element => {
   const { image, title } = props
   return (
       <Left>
-        <img src={image} width={"48px"} alt={""} />
+        <img width={"48px"} src={image} alt={""} />
         <Text
             fontFamily={"Zen Maru Gothic"}
             fontWeight={"500"}
