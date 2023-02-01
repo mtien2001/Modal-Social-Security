@@ -4,7 +4,7 @@ interface INotWarrantyProps {
 
 interface IWarrantyProps {
   isDisabled: false;
-  labels?: string[] | (string | undefined)[];
+  labels?: (string | undefined)[];
   money?: string;
 }
 

@@ -1,5 +1,5 @@
 export interface IWarrantyProps {
-  labels?: string[] | (string | undefined)[];
+  labels?: (string | undefined)[];
   textMoney?: string;
   image: string;
   title: string;
