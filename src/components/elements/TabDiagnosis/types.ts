@@ -4,12 +4,12 @@ interface INotWarrantyProps {
 
 interface IWarrantyProps {
   isDisabled: false;
-  labels?: string[] | (string | undefined)[];
+  labels?: string[];
   money?: string;
 }
 
 export interface ITabDiagnosisProps {
-  data?: {
+  data: {
     whenHeDied: IWarrantyProps | INotWarrantyProps;
     whenMedicalExpensesBecomeHigh: IWarrantyProps | INotWarrantyProps;
     whenYouCanNotWork: IWarrantyProps | INotWarrantyProps;

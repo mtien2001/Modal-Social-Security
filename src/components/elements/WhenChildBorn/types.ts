@@ -4,8 +4,8 @@ interface INotWarrantyProps {
 
 interface IWarrantyProps {
   isDisabled: false;
-  labels: string[];
-  money: string;
+  labels?: string[];
+  money?: string;
 }
 
 export interface IWhenChildBornProps {

@@ -1,6 +1,6 @@
 export interface IWarrantyProps {
-  labels: string[];
-  textMoney: string;
+  labels?: string[];
+  textMoney?: string;
   image: string;
   title: string;
   textDesc?: string;

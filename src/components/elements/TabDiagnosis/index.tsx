@@ -7,14 +7,12 @@ import { WhenInTrouble } from "../WhenInTrouble";
 import { WhenChildBorn } from "../WhenChildBorn";
 
 export const TabDiagnosis = (props: ITabDiagnosisProps): JSX.Element => {
-  const {data}  = props;
+  const {data} = props;
 
-    return (
+  return (
     <div>
       <WhenHeDied data={data?.whenHeDied} />
-      <WhenMedicalExpensesBecomeHigh
-        data={data?.whenMedicalExpensesBecomeHigh}
-      />
+      <WhenMedicalExpensesBecomeHigh data={data?.whenMedicalExpensesBecomeHigh} />
       <WhenYouCanNotWork data={data?.whenYouCanNotWork} />
       <WhenInTrouble data={data?.whenInTrouble} />
       <WhenChildBorn data={data?.whenChildBorn} />

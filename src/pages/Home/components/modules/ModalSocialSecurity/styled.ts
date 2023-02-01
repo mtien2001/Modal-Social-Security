@@ -5,6 +5,7 @@ export const ModalStyled = Modal.styled`
   max-width: 855px;
   width: 100%;
   max-height: 100%;
+  min-height: 695px;
   background-color: #91C5B6;
   border-radius: 12px;
   margin: 0px;
