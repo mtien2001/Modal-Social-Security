@@ -65,9 +65,7 @@ const Component = (
         </Text>
         <Img width={"130px"} src={images.staffRight} alt={""} />
       </ModalHeader>
-      <ModalBody>
-        {data && <TabDiagnosis data={data} />}
-      </ModalBody>
+      <ModalBody>{data && <TabDiagnosis data={data} />}</ModalBody>
     </Modal>
   );
 };

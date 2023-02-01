@@ -22,10 +22,8 @@ const useFetchSocialSecurity = () => {
       const response = await socialSecurityRepository.getSocialSecurityResult(
         {}
       );
-      setTimeout(() => {
-        setData(convertData(response));
-        setIsLoading(false);
-      }, 1500);
+      setData(convertData(response));
+      setIsLoading(false);
     } finally {
     }
   };

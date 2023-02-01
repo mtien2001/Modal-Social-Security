@@ -6,7 +6,9 @@ export class SocialSecurityRepository {
     _params: ISocialSecurityParams
   ): Promise<ISocialSecurityResponse> {
     return new Promise(resolve => {
-      resolve(dataMock);
+      setTimeout(() => {
+        resolve(dataMock);
+      }, 1500);
     });
   }
 }

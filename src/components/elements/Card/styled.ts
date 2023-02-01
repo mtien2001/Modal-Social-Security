@@ -18,7 +18,7 @@ export const Flex =
   flex-direction: row;
   @media (max-width: 768px) {
     flex-direction: ${props => props.flexDirectionResponsive};
-    flex-wrap: wrap;
+    flex-wrap: ${props => props.flexWrapResponsive};
   };
   @media (max-width: 576px) {
     justify-content: ${props => props.justifyContentResponsive}

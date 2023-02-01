@@ -84,6 +84,7 @@ export const Warranty = (props: IWarrantyProps): JSX.Element => {
                 {labels?.map((item, index) => <Budget key={index}>{item}</Budget>)}
             </Flex>
             <Flex
+                flexWrapResponsive={'wrap'}
                 alignItems={"baseline"}
                 padding={"0 16px 16px 16px"}
                 justifyContent={"flex-end"}
@@ -99,7 +100,7 @@ export const Warranty = (props: IWarrantyProps): JSX.Element => {
                 >
                     {textDesc}&nbsp;
                 </Text>
-                {textDescMoney ? (
+                {textDescMoney && (
                     <Text
                         color={"#ba8620"}
                         fontFamily={"Zen Maru Gothic"}
@@ -109,8 +110,6 @@ export const Warranty = (props: IWarrantyProps): JSX.Element => {
                     >
                         {textDescMoney}
                     </Text>
-                ) : (
-                    <></>
                 )}
                 <Text
                     color={"#ba8620"}
