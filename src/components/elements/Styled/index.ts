@@ -23,7 +23,7 @@ export const Flex =
   flex-direction: ${props => props.flexDirection};
   @media (max-width: 768px) {
     flex-direction: ${props => props.flexDirectionTablet};
-    flex-wrap: ${props => props.flexWrapResponsive};
+    flex-wrap: ${props => props.flexWrapTablet};
     border-radius: ${props => props.borderRadiusTablet};
     min-width: ${props => props.minWidthTablet};
     min-height: ${props => props.minHeightTablet};
@@ -63,11 +63,14 @@ export const Budget = styled.div`
 
 export const Img =
   styled.img <
-  { displayResponsive?: string } >
+  any >
   `
   width: ${props => props.width};
+  max-width: ${props => props.maxWidth};
+  height: ${props => props.height};
+  max-height: ${props => props.maxHeight};
   @media (max-width: 576px) {
-    display: ${props => props.displayResponsive};
+    display: ${props => props.displayMobileHorizontal};
   }
 `;
 

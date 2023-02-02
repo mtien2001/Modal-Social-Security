@@ -41,7 +41,7 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
               backgroundColor={'#91b3a9'} boxShadow={'2px 4px 10px rgba(30, 38, 46, 0.08)'}
               maxHeight={'102px'} maxWidth={'492px'} width={'100%'} flexDirection={'column'}
               borderRadius={'0 12px 12px 0'} borderRadiusTablet={'0 0 12px 12px'}
-              minWidthTablet={'100%'}
+              minWidthTablet={'100%'} maxHeightTablet={'100%'}
           >
               <Flex
                   alignItems={"center"}
@@ -92,13 +92,13 @@ export const Warranty = (props: IWarrantyProps): JSX.Element => {
             backgroundColor={'#fff'} boxShadow={'2px 4px 10px rgba(30, 38, 46, 0.08)'}
             maxHeight={'102px'} maxWidth={'492px'} width={'100%'} flexDirection={'column'}
             borderRadius={'0 12px 12px 0'} borderRadiusTablet={'0 0 12px 12px'}
-            minWidthTablet={'100%'}
+            minWidthTablet={'100%'} maxHeightTablet={'100%'}
         >
             <Flex gap={"8px"} padding={"16px 16px 10px 16px"} flexWrap={"wrap"}>
                 {labels?.map((item, index) => <Budget key={index}>{item}</Budget>)}
             </Flex>
             <Flex
-                flexWrapResponsive={'wrap'}
+                flexWrapTablet={'wrap'}
                 alignItems={"baseline"}
                 padding={"0 16px 16px 16px"}
                 justifyContent={"flex-end"}

@@ -24,7 +24,7 @@ const Component = (
             width={"133.17px"}
             src={images.staffLeft}
             alt={""}
-            displayResponsive={"none"}
+            displayMobileHorizontal={"none"}
           />
           <Text
             fontSize={"24px"}
@@ -39,7 +39,7 @@ const Component = (
             width={"130px"}
             src={images.staffRight}
             alt={""}
-            displayResponsive={"none"}
+            displayMobileHorizontal={"none"}
           />
         </ModalHeader>
         <ModalBody>
@@ -62,7 +62,7 @@ const Component = (
           width={"133.17px"}
           src={images.staffLeft}
           alt={""}
-          displayResponsive={"none"}
+          displayMobileHorizontal={"none"}
         />
         <Text
           fontSize={"24px"}
@@ -77,7 +77,7 @@ const Component = (
           width={"130px"}
           src={images.staffRight}
           alt={""}
-          displayResponsive={"none"}
+          displayMobileHorizontal={"none"}
         />
       </ModalHeader>
       <ModalBody>{data && <TabDiagnosis data={data} />}</ModalBody>
