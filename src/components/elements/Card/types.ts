@@ -7,12 +7,6 @@ export interface IWarrantyProps {
   textDescMoney?: string;
 }
 
-export interface ICardLeftProps {
-  image: string;
-  title: string;
-}
+export interface ICardLeftProps extends IWarrantyProps {}
 
-export interface INotWarrantyProps {
-  image: string;
-  title: string;
-}
+export interface INotWarrantyProps extends IWarrantyProps {}

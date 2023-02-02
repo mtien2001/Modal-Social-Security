@@ -1,16 +1,11 @@
 import React from "react";
-import {
-  ModalStyled as Modal,
-  ModalHeader,
-  ModalBody,
-  Img,
-  Text
-} from "./styled";
-import { images } from "../../../../../assets/images";
-import { TabDiagnosis } from "../../../../../components/elements/TabDiagnosis";
+import { ModalStyled as Modal, ModalHeader, ModalBody } from "./styled";
+import { images } from "../../../assets/images";
+import { TabDiagnosis } from "../../elements/TabDiagnosis";
 import { useModalSocialSecurity } from "./hooks";
 import { IModalSecurityProps } from "./types";
 import { Spinner } from "@chakra-ui/react";
+import { Text, Img } from "../../elements/Styleds";
 
 const Component = (
   props: ReturnType<typeof useModalSocialSecurity>
@@ -25,7 +20,12 @@ const Component = (
         onEscapeKeydown={onClose}
       >
         <ModalHeader>
-          <Img width={"133.17px"} src={images.staffLeft} alt={""} />
+          <Img
+            width={"133.17px"}
+            src={images.staffLeft}
+            alt={""}
+            displayResponsive={"none"}
+          />
           <Text
             fontSize={"24px"}
             lineHeight={"100%"}
@@ -35,7 +35,12 @@ const Component = (
           >
             あなたが公的保険で受け取れる金額
           </Text>
-          <Img width={"130px"} src={images.staffRight} alt={""} />
+          <Img
+            width={"130px"}
+            src={images.staffRight}
+            alt={""}
+            displayResponsive={"none"}
+          />
         </ModalHeader>
         <ModalBody>
           <center>
@@ -53,7 +58,12 @@ const Component = (
       onEscapeKeydown={onClose}
     >
       <ModalHeader>
-        <Img width={"133.17px"} src={images.staffLeft} alt={""} />
+        <Img
+          width={"133.17px"}
+          src={images.staffLeft}
+          alt={""}
+          displayResponsive={"none"}
+        />
         <Text
           fontSize={"24px"}
           lineHeight={"100%"}
@@ -63,7 +73,12 @@ const Component = (
         >
           あなたが公的保険で受け取れる金額
         </Text>
-        <Img width={"130px"} src={images.staffRight} alt={""} />
+        <Img
+          width={"130px"}
+          src={images.staffRight}
+          alt={""}
+          displayResponsive={"none"}
+        />
       </ModalHeader>
       <ModalBody>{data && <TabDiagnosis data={data} />}</ModalBody>
     </Modal>

@@ -16,6 +16,10 @@ export const ModalStyled = Modal.styled`
      max-height: 692px;
      overflow-y: scroll;
   };
+    @media (max-width: 576px) {
+     margin-left: 16px;
+     margin-right: 16px;
+  };
 `;
 
 export const ModalHeader = styled.div`
@@ -27,36 +31,15 @@ export const ModalHeader = styled.div`
   padding-left: 24px;
   padding-right: 24px;
   min-height: 100px;
+  @media (max-width: 576px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 `;
 
 export const ModalBody = styled.div`
   padding: 0 24px 24px 24px;
-`;
-
-export const Img = styled.img`
-  width: ${props => props.width};
   @media (max-width: 576px) {
-    display: none;
+    padding: 0 16px 16px 16px;
   }
-`;
-
-export const Text = styled.h1<any>(
-  {
-    lineHeight: "100%",
-    margin: "0px"
-  },
-  props => ({
-    ...props
-  })
-);
-
-export const Flex = styled.div`
-  display: flex;
-  flex-direction: row;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-  width: 100%;
-  margin-bottom: 12px;
-  min-height: 102px;
 `;

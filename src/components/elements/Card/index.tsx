@@ -1,5 +1,5 @@
 import React from "react";
-import { Right, Budget, Button, Text, Flex, Left } from "./styled";
+import { Right, Budget, Button, Flex, Left, Text, Img } from "../Styleds";
 import {ICardLeftProps, INotWarrantyProps, IWarrantyProps} from "./types";
 import {images} from "../../../assets/images";
 
@@ -7,7 +7,7 @@ const CardLeft = ( props: ICardLeftProps ): JSX.Element => {
   const { image, title } = props
   return (
       <Left>
-        <img width={"48px"} src={image} alt={""} />
+        <Img width={"48px"} src={image} alt={""} />
         <Text
             fontFamily={"Zen Maru Gothic"}
             fontWeight={"500"}
@@ -29,7 +29,7 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
       <Flex
           margin={"0 0 12px 0"}
           width={"100%"}
-          flexDirectionResponsive={"column"}
+          flexDirectionTablet={"column"}
           minHeight={"102px"}
       >
           <CardLeft image={image} title={title} />
@@ -40,7 +40,7 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
                   height={"fit-content"}
                   padding={"16px 16px 8px 16px"}
               >
-                  <img width={"20px"} src={images.exclamationMarkIcon} alt={""} />
+                  <Img width={"20px"} src={images.exclamationMarkIcon} alt={""} />
                   <Text
                       fontSize={"16px"}
                       lineHeight={"100%"}
@@ -75,7 +75,7 @@ export const Warranty = (props: IWarrantyProps): JSX.Element => {
     <Flex
       margin={"0 0 12px 0"}
       width={"100%"}
-      flexDirectionResponsive={"column"}
+      flexDirectionTablet={"column"}
       minHeight={"102px"}
     >
       <CardLeft image={image} title={title} />
@@ -88,8 +88,7 @@ export const Warranty = (props: IWarrantyProps): JSX.Element => {
                 alignItems={"baseline"}
                 padding={"0 16px 16px 16px"}
                 justifyContent={"flex-end"}
-                justifyContentResponsive={"center"}
-                flexDirectionResponsive={"flex-end"}
+                justifyContentMobileHorizontal={"center"}
             >
                 <Text
                     fontFamily={"Hiragino Sans"}

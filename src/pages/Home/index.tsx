@@ -1,6 +1,6 @@
 import React from "react";
-import { ModalSocialSecurityDiagnosis } from "./components/modules/ModalSocialSecurity";
-import { useDisclosure } from "./hooks";
+import { ModalSocialSecurityDiagnosis } from "../../components/modules/ModalSocialSecurity";
+import { useDisclosure } from "../../hooks/UseDisclosure";
 
 export const Home = (): JSX.Element => {
   const { isOpen, onOpen, onClose } = useDisclosure();

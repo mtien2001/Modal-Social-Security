@@ -17,11 +17,11 @@ export const Flex =
   align-items: ${props => props.alignItems};
   flex-direction: row;
   @media (max-width: 768px) {
-    flex-direction: ${props => props.flexDirectionResponsive};
+    flex-direction: ${props => props.flexDirectionTablet};
     flex-wrap: ${props => props.flexWrapResponsive};
   };
   @media (max-width: 576px) {
-    justify-content: ${props => props.justifyContentResponsive}
+    justify-content: ${props => props.justifyContentMobileHorizontal}
   }
 `;
 
@@ -71,17 +71,6 @@ export const Right =
   border-bottom-right-radius: 12px;
 `;
 
-export const Text = styled.p<any>(
-  {
-    lineHeight: "100%",
-    margin: "0px",
-    padding: "0px"
-  },
-  props => ({
-    ...props
-  })
-);
-
 export const Left = styled.div`
   display: flex;
   align-items: center;
@@ -102,3 +91,24 @@ export const Left = styled.div`
   border-bottom-left-radius: 12px;
   padding: 16px;
 `;
+
+export const Img =
+    styled.img <
+        { displayResponsive?: string } >
+        `
+  width: ${props => props.width};
+  @media (max-width: 576px) {
+    display: ${props => props?.displayResponsive};
+  }
+`;
+
+export const Text = styled.p<any>(
+    {
+        lineHeight: "100%",
+        margin: "0px",
+        padding: "0px"
+    },
+    props => ({
+        ...props
+    })
+);

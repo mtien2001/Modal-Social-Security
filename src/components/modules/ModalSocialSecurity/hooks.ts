@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { socialSecurityRepository } from "../../../../../repositories";
-import { convertData } from "./convert";
+import { socialSecurityRepository } from "../../../repositories";
+import { convertData } from "./ultis";
 import { IModalSecurityProps, ISocialSecurityData } from "./types";
 
 export const useModalSocialSecurity = (props: IModalSecurityProps) => {
@@ -23,8 +23,8 @@ const useFetchSocialSecurity = () => {
         {}
       );
       setData(convertData(response));
-      setIsLoading(false);
     } finally {
+      setIsLoading(false);
     }
   };
 
