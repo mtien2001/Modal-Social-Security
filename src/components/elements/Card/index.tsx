@@ -1,12 +1,16 @@
 import React from "react";
-import { Right, Budget, Button, Flex, Left, Text, Img } from "../Styleds";
+import { Budget, Button, Flex, Text, Img } from "../Styled";
 import {ICardLeftProps, INotWarrantyProps, IWarrantyProps} from "./types";
 import {images} from "../../../assets/images";
 
 const CardLeft = ( props: ICardLeftProps ): JSX.Element => {
   const { image, title } = props
   return (
-      <Left>
+      <Flex alignItems={'center'} backgroundColor={'#edf9f5'} maxWidth={'315px'} width={'100%'} minHeight={'102px'}
+            borderRadius={'12px 0 0 12px'} boxShadow={'2px 4px 10px rgba(30, 38, 46, 0.08)'} padding={'16px'}
+            height={'100%'} borderRadiusTablet={'12px 12px 0 0'} minWidthTablet={'100%'} minHeightTablet={'70px'}
+            justifyContentTablet={'center'}
+      >
         <Img width={"48px"} src={image} alt={""} />
         <Text
             fontFamily={"Zen Maru Gothic"}
@@ -19,7 +23,7 @@ const CardLeft = ( props: ICardLeftProps ): JSX.Element => {
         >
           {title}
         </Text>
-      </Left>
+      </Flex>
   )
 }
 
@@ -33,7 +37,12 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
           minHeight={"102px"}
       >
           <CardLeft image={image} title={title} />
-          <Right backgroundColor={'#91b3a9'}>
+          <Flex
+              backgroundColor={'#91b3a9'} boxShadow={'2px 4px 10px rgba(30, 38, 46, 0.08)'}
+              maxHeight={'102px'} maxWidth={'492px'} width={'100%'} flexDirection={'column'}
+              borderRadius={'0 12px 12px 0'} borderRadiusTablet={'0 0 12px 12px'}
+              minWidthTablet={'100%'}
+          >
               <Flex
                   alignItems={"center"}
                   justifyContent={"start"}
@@ -64,7 +73,7 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
                   ご家族の詳細情報やお住いの市区町村などの条件により、対象になる場合もあります。<br />
                   より正確な情報は、日本年金機構や加入している協会けんぽ又は健康保険組合等でご確認下さい。
               </Text>
-          </Right>
+          </Flex>
       </Flex>
   )
 }
@@ -79,7 +88,12 @@ export const Warranty = (props: IWarrantyProps): JSX.Element => {
       minHeight={"102px"}
     >
       <CardLeft image={image} title={title} />
-        <Right backgroundColor={'#fff'}>
+        <Flex
+            backgroundColor={'#fff'} boxShadow={'2px 4px 10px rgba(30, 38, 46, 0.08)'}
+            maxHeight={'102px'} maxWidth={'492px'} width={'100%'} flexDirection={'column'}
+            borderRadius={'0 12px 12px 0'} borderRadiusTablet={'0 0 12px 12px'}
+            minWidthTablet={'100%'}
+        >
             <Flex gap={"8px"} padding={"16px 16px 10px 16px"} flexWrap={"wrap"}>
                 {labels?.map((item, index) => <Budget key={index}>{item}</Budget>)}
             </Flex>
@@ -149,7 +163,7 @@ export const Warranty = (props: IWarrantyProps): JSX.Element => {
                     詳しくみる
                 </Button>
             </Flex>
-        </Right>
+        </Flex>
     </Flex>
   );
 };

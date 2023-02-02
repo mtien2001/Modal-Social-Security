@@ -6,19 +6,29 @@ export const Flex =
   `
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: ${props => props.width};
   gap: ${props => props.gap};
   min-height: ${props => props.minHeight};
+  max-height: ${props => props.maxHeight};
   height: ${props => props.height};
   flex-wrap: ${props => props.flexWrap};
   margin: ${props => props.margin};
   padding: ${props => props.padding};
   justify-content: ${props => props.justifyContent};
   align-items: ${props => props.alignItems};
-  flex-direction: row;
+  max-width: ${props => props.maxWidth};
+  box-shadow: ${props => props.boxShadow};
+  background-color: ${props => props.backgroundColor};
+  border-radius: ${props => props.borderRadius};
+  flex-direction: ${props => props.flexDirection};
   @media (max-width: 768px) {
     flex-direction: ${props => props.flexDirectionTablet};
     flex-wrap: ${props => props.flexWrapResponsive};
+    border-radius: ${props => props.borderRadiusTablet};
+    min-width: ${props => props.minWidthTablet};
+    min-height: ${props => props.minHeightTablet};
+    justify-content: ${props => props.justifyContentTablet};
+    max-height: ${props => props.maxHeightTablet};
   };
   @media (max-width: 576px) {
     justify-content: ${props => props.justifyContentMobileHorizontal}
@@ -51,64 +61,23 @@ export const Budget = styled.div`
   line-height: 100%;
 `;
 
-export const Right =
-  styled.div <
-  any >
-  `
-  align-items: center;
-  background-color: ${props => props.backgroundColor};
-  max-width: 492px;
-  max-height: 102px;
-  @media (max-width: 768px) {
-    max-height: 100%;
-    min-width: 100%;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 12px;
-  }
-  width: 100%;
-  box-shadow: 2px 4px 10px rgba(30, 38, 46, 0.08);
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-`;
-
-export const Left = styled.div`
-  display: flex;
-  align-items: center;
-  background-color: #edf9f5;
-  max-width: 315px;
-  min-height: 102px;
-  @media (max-width: 768px) {
-    min-width: 100%;
-    justify-content: center;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 12px;
-    min-height: 70px;
-  }
-  width: 100%;
-  height: 100%;
-  box-shadow: 2px 4px 10px rgba(30, 38, 46, 0.08);
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  padding: 16px;
-`;
-
 export const Img =
-    styled.img <
-        { displayResponsive?: string } >
-        `
+  styled.img <
+  { displayResponsive?: string } >
+  `
   width: ${props => props.width};
   @media (max-width: 576px) {
-    display: ${props => props?.displayResponsive};
+    display: ${props => props.displayResponsive};
   }
 `;
 
 export const Text = styled.p<any>(
-    {
-        lineHeight: "100%",
-        margin: "0px",
-        padding: "0px"
-    },
-    props => ({
-        ...props
-    })
+  {
+    lineHeight: "100%",
+    margin: "0px",
+    padding: "0px"
+  },
+  props => ({
+    ...props
+  })
 );

@@ -5,7 +5,7 @@ import { TabDiagnosis } from "../../elements/TabDiagnosis";
 import { useModalSocialSecurity } from "./hooks";
 import { IModalSecurityProps } from "./types";
 import { Spinner } from "@chakra-ui/react";
-import { Text, Img } from "../../elements/Styleds";
+import { Text, Img } from "../../elements/Styled";
 
 const Component = (
   props: ReturnType<typeof useModalSocialSecurity>
