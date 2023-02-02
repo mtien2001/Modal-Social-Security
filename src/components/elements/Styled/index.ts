@@ -46,21 +46,6 @@ export const Button = styled.p<any>(
   })
 );
 
-export const Budget = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #FFF6E3;
-  border-radius: 27px;
-  min-width: 118px;
-  min-height: 26px;
-  color: #BA8620;
-  font-family: 'Hiragino Sans;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 100%;
-`;
-
 export const Img =
   styled.img <
   any >

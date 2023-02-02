@@ -1,5 +1,5 @@
 import React from "react";
-import { Budget, Button, Flex, Text, Img } from "../Styled";
+import { Button, Flex, Text, Img } from "../Styled";
 import {ICardLeftProps, INotWarrantyProps, IWarrantyProps} from "./types";
 import {images} from "../../../assets/images";
 
@@ -95,7 +95,16 @@ export const Warranty = (props: IWarrantyProps): JSX.Element => {
             minWidthTablet={'100%'} maxHeightTablet={'100%'}
         >
             <Flex gap={"8px"} padding={"16px 16px 10px 16px"} flexWrap={"wrap"}>
-                {labels?.map((item, index) => <Budget key={index}>{item}</Budget>)}
+                {labels?.map((item, index) =>
+                    <Text
+                        key={index} fontFamily={'Hiragino Sans'} color={'#BA8620'}
+                        fontWeight={'300'} fontSize={'14px'} minWidth={'118px'}
+                        minHeight={'26px'} backgroundColor={'#FFF6E3'} borderRadius={'27px'}
+                        textAlign={'center'} padding={'6px 0'}
+                    >
+                        {item}
+                    </Text>
+                )}
             </Flex>
             <Flex
                 flexWrapTablet={'wrap'}
