@@ -1,15 +1,16 @@
 import React from "react";
-import { Button, Flex, Text, Img } from "../Styled";
+import { Button, Box, Text, Img } from "../Styled";
 import {ICardLeftProps, INotWarrantyProps, IWarrantyProps} from "./types";
 import {images} from "../../../assets/images";
 
 const CardLeft = ( props: ICardLeftProps ): JSX.Element => {
   const { image, title } = props
   return (
-      <Flex alignItems={'center'} backgroundColor={'#edf9f5'} maxWidth={'315px'} width={'100%'} minHeight={'102px'}
-            borderRadius={'12px 0 0 12px'} boxShadow={'2px 4px 10px rgba(30, 38, 46, 0.08)'} padding={'16px'}
-            height={'100%'} borderRadiusTablet={'12px 12px 0 0'} minWidthTablet={'100%'} minHeightTablet={'70px'}
-            justifyContentTablet={'center'}
+      <Box
+          display={'flex'} flexDirection={'row'} alignItems={'center'} backgroundColor={'#edf9f5'} maxWidth={'315px'} width={'100%'} minHeight={'102px'}
+          borderRadius={'12px 0 0 12px'} boxShadow={'2px 4px 10px rgba(30, 38, 46, 0.08)'} padding={'16px'}
+          height={'100%'} borderRadiusTablet={'12px 12px 0 0'} minWidthTablet={'100%'} minHeightTablet={'70px'}
+          justifyContentTablet={'center'}
       >
         <Img width={"48px"} src={image} alt={""} />
         <Text
@@ -23,27 +24,30 @@ const CardLeft = ( props: ICardLeftProps ): JSX.Element => {
         >
           {title}
         </Text>
-      </Flex>
+      </Box>
   )
 }
 
 export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
     const { image, title } = props
   return (
-      <Flex
+      <Box
+          display={'flex'} flexDirection={'row'}
           margin={"0 0 12px 0"}
           width={"100%"}
           flexDirectionTablet={"column"}
           minHeight={"102px"}
       >
           <CardLeft image={image} title={title} />
-          <Flex
+          <Box
+              display={'flex'}
               backgroundColor={'#91b3a9'} boxShadow={'2px 4px 10px rgba(30, 38, 46, 0.08)'}
               maxHeight={'102px'} maxWidth={'492px'} width={'100%'} flexDirection={'column'}
               borderRadius={'0 12px 12px 0'} borderRadiusTablet={'0 0 12px 12px'}
               minWidthTablet={'100%'} maxHeightTablet={'100%'}
           >
-              <Flex
+              <Box
+                  display={'flex'} flexDirection={'row'}
                   alignItems={"center"}
                   justifyContent={"start"}
                   height={"fit-content"}
@@ -60,7 +64,7 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
                   >
                       保障の対象外です
                   </Text>
-              </Flex>
+              </Box>
               <Text
                   fontFamily={"Zen Maru Gothic"}
                   color={"#fff"}
@@ -73,28 +77,28 @@ export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
                   ご家族の詳細情報やお住いの市区町村などの条件により、対象になる場合もあります。<br />
                   より正確な情報は、日本年金機構や加入している協会けんぽ又は健康保険組合等でご確認下さい。
               </Text>
-          </Flex>
-      </Flex>
+          </Box>
+      </Box>
   )
 }
 
 export const Warranty = (props: IWarrantyProps): JSX.Element => {
   const { labels, textMoney, title, image, textDesc, textDescMoney } = props;
   return (
-    <Flex
+    <Box display={'flex'} flexDirection={'row'}
       margin={"0 0 12px 0"}
       width={"100%"}
       flexDirectionTablet={"column"}
       minHeight={"102px"}
     >
       <CardLeft image={image} title={title} />
-        <Flex
+        <Box
             backgroundColor={'#fff'} boxShadow={'2px 4px 10px rgba(30, 38, 46, 0.08)'}
             maxHeight={'102px'} maxWidth={'492px'} width={'100%'} flexDirection={'column'}
             borderRadius={'0 12px 12px 0'} borderRadiusTablet={'0 0 12px 12px'}
             minWidthTablet={'100%'} maxHeightTablet={'100%'}
         >
-            <Flex gap={"8px"} padding={"16px 16px 10px 16px"} flexWrap={"wrap"}>
+            <Box display={'flex'} flexDirection={'row'} gap={"8px"} padding={"16px 16px 10px 16px"} flexWrap={"wrap"}>
                 {labels?.map((item, index) =>
                     <Text
                         key={index} fontFamily={'Hiragino Sans'} color={'#BA8620'}
@@ -105,8 +109,8 @@ export const Warranty = (props: IWarrantyProps): JSX.Element => {
                         {item}
                     </Text>
                 )}
-            </Flex>
-            <Flex
+            </Box>
+            <Box display={'flex'} flexDirection={'row'}
                 flexWrapTablet={'wrap'}
                 alignItems={"baseline"}
                 padding={"0 16px 16px 16px"}
@@ -171,8 +175,8 @@ export const Warranty = (props: IWarrantyProps): JSX.Element => {
                 >
                     詳しくみる
                 </Button>
-            </Flex>
-        </Flex>
-    </Flex>
+            </Box>
+        </Box>
+    </Box>
   );
 };

@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
 
-export const Flex =
+export const Box =
   styled.div <
   any >
   `
-  display: flex;
-  flex-direction: row;
+  display: block;
+  display: ${props => props.display};
   width: ${props => props.width};
   gap: ${props => props.gap};
   min-height: ${props => props.minHeight};
