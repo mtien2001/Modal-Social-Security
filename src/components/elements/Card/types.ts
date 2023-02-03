@@ -1,12 +1,12 @@
 export interface IWarrantyProps {
-  labels?: (string | undefined)[];
-  textMoney?: string;
+  labels: (string | undefined)[];
+  textMoney: string;
   image: string;
   title: string;
   textDesc?: string;
   textDescMoney?: string;
 }
 
-export interface ICardLeftProps extends IWarrantyProps {}
+export type TCardLeftProps = Pick<IWarrantyProps, "image" | "title">;
 
-export interface INotWarrantyProps extends IWarrantyProps {}
+export type TNotWarrantyProps = Pick<IWarrantyProps, "image" | "title">;

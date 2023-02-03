@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Box, Text, Img } from "../Styled";
-import { ICardLeftProps, INotWarrantyProps, IWarrantyProps } from "./types";
+import { TCardLeftProps, TNotWarrantyProps, IWarrantyProps } from "./types";
 import { images } from "../../../assets/images";
 
-const CardLeft = (props: ICardLeftProps): JSX.Element => {
+const CardLeft = (props: TCardLeftProps): JSX.Element => {
   const { image, title } = props;
   return (
     <Box
@@ -39,7 +39,7 @@ const CardLeft = (props: ICardLeftProps): JSX.Element => {
   );
 };
 
-export const NotWarranty = (props: INotWarrantyProps): JSX.Element => {
+export const NotWarranty = (props: TNotWarrantyProps): JSX.Element => {
   const { image, title } = props;
   return (
     <Box
@@ -132,23 +132,23 @@ export const Warranty = (props: IWarrantyProps): JSX.Element => {
           padding={"16px 16px 14px 16px"}
           flexWrap={"wrap"}
         >
-          {labels?.map((item, index) => (
-              <Text
-                key={index}
-                fontFamily={"Hiragino Sans"}
-                color={"#BA8620"}
-                fontWeight={"300"}
-                fontSize={"14px"}
-                minWidth={"118px"}
-                minHeight={"26px"}
-                backgroundColor={"#FFF6E3"}
-                borderRadius={"27px"}
-                textAlign={"center"}
-                padding={"6px 10px"}
-              >
-                {item}
-              </Text>
-            ))}
+          {labels.map((item, index) => (
+            <Text
+              key={index}
+              fontFamily={"Hiragino Sans"}
+              color={"#BA8620"}
+              fontWeight={"300"}
+              fontSize={"14px"}
+              minWidth={"118px"}
+              minHeight={"26px"}
+              backgroundColor={"#FFF6E3"}
+              borderRadius={"27px"}
+              textAlign={"center"}
+              padding={"6px 10px"}
+            >
+              {item}
+            </Text>
+          ))}
         </Box>
         <Box
           display={"flex"}
