@@ -42,6 +42,9 @@ export const Button = styled.p<any>(
     padding: "0px"
   },
   props => ({
+    "@media (max-width: 576px)": {
+      marginTop: props.marginMobileHorizontal
+    },
     ...props
   })
 );

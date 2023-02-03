@@ -4,8 +4,8 @@ interface INotWarrantyProps {
 
 interface IWarrantyProps {
   isDisabled: false;
-  labels?: (string | undefined)[];
-  money?: string;
+  labels: (string | undefined)[];
+  money: string;
 }
 
 export interface IWhenMedicalExpensesBecomeHighProps {
