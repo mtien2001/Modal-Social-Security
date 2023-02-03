@@ -35,6 +35,7 @@ export const Box =
   }
 `;
 
+
 export const Button = styled.p<any>(
   {
     lineHeight: "100%",
@@ -72,3 +73,9 @@ export const Text = styled.p<any>(
     ...props
   })
 );
+
+const a = 1
+const b = 2
+const c = a >> b
+
+console.log(c)
